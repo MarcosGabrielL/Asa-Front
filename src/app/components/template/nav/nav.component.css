@@ -1,0 +1,131 @@
+
+
+.sidebar .menu {
+  padding-top: 20px;
+  background: #e8e8e8;
+}
+.sidebar .menu .separator {
+  border-top: 1px solid #111111;
+  border-bottom: 1px solid #353535;
+  margin: 20px;
+}
+.sidebar .menu a {
+  color: #4e4e4e;
+  text-decoration: none;
+}
+.sidebar .menu a:hover {
+   color: #1b1b1b;
+  background: #fffc45;
+}
+.sidebar .menu .menu-name {
+  text-transform: uppercase;
+  padding: 0 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.sidebar .menu > ul.no-bullets > li a:before {
+  content: none !important;
+}
+.sidebar .menu > ul > li {
+  list-style: none;
+  list-style-type:none;
+}
+.sidebar .menu > ul{
+}
+.sidebar .menu > ul > li > a {
+  position: relative;
+  top: -3px;
+  font-size: 15px;
+  padding: 8px 25px;
+  display: block;
+  font-weight: bold;
+  list-style: none;
+  list-style-type:none;
+}
+.sidebar .menu > ul > li > a:before {
+  
+  height: 9px;
+  width: 9px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  box-shadow: inset 0 0 0 1px #EEE;
+}
+.sidebar .menu > ul > li.active {
+  color: #FF3A3A;
+  padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #FF3A3A;
+}
+.sidebar .menu > ul > li.active > a:hover{
+  color: #FFFFFF;
+    background-color: #FF3A3A;
+}
+.sidebar .menu > ul > li.active > a {
+  padding-bottom: 0;
+      color: #FFFFFF;
+}
+.sidebar .menu > ul > li.active > a:before {
+  background: #FF3A3A;
+  box-shadow: none;
+}
+.sidebar .menu > ul > li.active ul {
+  display: block;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+.sidebar .menu > ul > li.active ul li.active a {
+  color: #FFF;
+  font-weight: bold;
+}
+.sidebar .menu > ul > li.active ul li a {
+  padding: 5px;
+  display: block;
+  font-size: 13px;
+  color: #888;
+}
+.sidebar .menu > ul > li.active ul li a:hover {
+  color: #FFF;
+}
+.sidebar .menu > ul > li ul {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    height: 734px;
+}
+
+i {
+    padding-right: .6rem;
+}
+
+.side {
+    width: 250px; 
+    height: 800px;
+}
+
+mat-nav-list {
+    justify-content: center;
+}
+
+.nav {
+    width: 50%;
+}
+

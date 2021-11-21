@@ -1,0 +1,48 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<!-- Nav -->
+<mat-sidenav-container class="container">
+    <mat-sidenav class="side" mode="side" opened>
+            <aside class="sidebar">
+                    <menu class="menu">
+				<p class="menu-name"><b>Categorias</b></p>
+				<ul >
+					<li #myli class="active"
+                                            (click)="myli.classList.add('active'); my2li.classList.remove('active')"
+                                            ><a routerLink="" >Todas</a></li>
+					<li #my2li
+                                            (click)="myli.classList.remove('active'); my2li.classList.add('active')"
+                                            >
+                                            <a routerLink="filmes/acao">Ação</a></li>
+					<li><a href="#">Aventura</a></li>
+					<li><a href="#">Chanchada</a></li>
+					<li><a href="#">Comédia</a></li>
+					<li><a href="#">Documentário</a></li>
+					<li><a href="#">Drama</a></li>
+					<li><a href="#">Faroste</a></li>
+					<li><a href="#">Fantasia</a></li>
+					<li><a href="#">Sci-Fi</a></li>
+					<li><a href="#">Mistério</a></li>
+					<li><a href="#">Musical</a></li>
+					<li><a href="#">Policial</a></li>
+					<li><a href="#">Romance</a></li>
+					<li><a href="#">Suspense</a></li>
+					<li><a href="#">Terror</a></li>
+					<li><a href="#">Thriller</a></li>
+					<li><a href="#">Guerra</a></li>
+                                        <li><a ></a></li>
+				</ul>
+
+				<div class="separator"></div>
+			</menu>
+		</aside>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <router-outlet>
+            
+        </router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

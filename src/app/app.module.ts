@@ -32,6 +32,16 @@ import { ComentarioDeleteComponent } from './components/views/comentario/comenta
 import { CinefiloReadComponent } from './components/views/cinefilo/cinefilo-read/cinefilo-read.component';
 import { CinefiloUpdateComponent } from './components/views/cinefilo/cinefilo-update/cinefilo-update.component';
 import { CinefiloDeleteComponent } from './components/views/cinefilo/cinefilo-delete/cinefilo-delete.component';
+import { HomeComponent } from './components/views/home/home.component';
+import { HomeGeralFilmesComponent } from './components/views/home/home-geral-filmes/home-geral-filmes.component';
+import { HomeAcaoFilmesComponent } from './components/views/home/home-acao-filmes/home-acao-filmes.component';
+import { HomeSerieComponent } from './components/views/home-serie/home-serie.component';
+import { CinefiloHomeComponent } from './components/views/cinefilo/cinefilo-home/cinefilo-home.component';
+import { NoticiasHomeComponent } from './components/views/noticias/noticias-home/noticias-home.component';
+import { ListasHomeComponent } from './components/views/listas/listas-home/listas-home.component';
+import { ArtistasHomeComponent } from './components/views/artistas/artistas-home/artistas-home.component';
+import { MovieBuscaComponent } from './components/views/movie/movie-busca/movie-busca.component';
+import { MoviePageComponent } from './components/views/movie/movie-page/movie-page.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +60,17 @@ import { CinefiloDeleteComponent } from './components/views/cinefilo/cinefilo-de
     ComentarioDeleteComponent,
     CinefiloReadComponent,
     CinefiloUpdateComponent,
-    CinefiloDeleteComponent
+    CinefiloDeleteComponent,
+    HomeComponent,
+    HomeGeralFilmesComponent,
+    HomeAcaoFilmesComponent,
+    HomeSerieComponent,
+    CinefiloHomeComponent,
+    NoticiasHomeComponent,
+    ListasHomeComponent,
+    ArtistasHomeComponent,
+    MovieBuscaComponent,
+    MoviePageComponent
   ],
   imports: [
     BrowserModule,
