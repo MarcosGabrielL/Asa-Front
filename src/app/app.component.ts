@@ -9,6 +9,7 @@ import {ViewChild, ElementRef } from "@angular/core";
 })
 export class AppComponent {
   title = 'asafrontapp';
+
      constructor( private router: Router) { }
 
 }
