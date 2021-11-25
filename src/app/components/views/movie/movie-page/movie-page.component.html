@@ -1,12 +1,9 @@
 
-<!DOCTYPE html>
-<html lang="en" style="background: #f3f3f3;" >
-     
-<head>
-
-
-
-<style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+     <style>
 html {
   font-size: 10px;
 }
@@ -64,11 +61,11 @@ a {
 }
 .info {
  color: #333333;
-    width: 41%;
+    width: 36%;
     background-color: #e8e8e8;
     padding: 2rem 2rem 4rem 2rem;
     position: absolute;
-    right: 31%;
+    right: 35%;
     height: 45rem;
 }
 .title {
@@ -125,10 +122,10 @@ a {
   color: #fff;
 }
 .percent span sup {
-  position: absolute;
-  vertical-align: super;
-  font-size: 1.1rem;
-  font-weight: 100;
+ position: initial;
+    vertical-align: middle;
+    font-size: 2.3rem;
+    font-weight: 100;
 }
 .meta-actions ul {
   margin-left: 1.5rem;
@@ -396,123 +393,75 @@ a {
     border-color: #2e6da4;
 }
 
-</style>
-</head>
-
-<body translate="no" >
-    <input type="hidden" id="id" value="" />
-    <input type="hidden" id="idc" value="" />
-  <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
-          integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <title>Movie page</title>
-  </head>
-  <body>
-      
+</style> 
   
+<div class="separator" style="display: grid; margin-bottom: 200px;">
     <section class="tv-content">
-         <!-- Contenedor lado -->
-<div class="lado">
-    <nav class="menu-left menu-left-open" style="    margin-top: 40px;
-    width: 22%;
-    right: 8%;
+         <!-- Trailer e fotos -->
+        <div class="lado">
+            <nav class="menu-left menu-left-open trailer" style="    margin-top: 40px;
+    width: 27%;
+    right: 6%;
     height: 45rem;
     background-color: #e8e8e8;
     background-blend-mode: multiply;
     position: absolute;">
-        <h1 style="margin-top: 0px;
-    margin-left: 0;
-    border: 0;
-    font-size: 15px;
-    text-transform: none;">Trailer</h1>
-  
-        <div class="video-container">
-  <a class="video-slider, videobox">
-    <div class="video-slide">
-      <video controls>
-        <source src="https://coopersferry.com/storage/app/media/uploaded-files/video-slider/CAMDEN%20OPPORTUNITY%20TO%20BUILD%20A%20SECURE%20FUTURE.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="video-slide">
-      <video controls>
-        <source src="https://coopersferry.com/storage/app/media/uploaded-files/video-slider/CAMDEN%20OUR%20COMMUNITY%20ON%20THE%20RISE.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="video-slide">
-      <video controls>
-        <source src="https://coopersferry.com/storage/app/media/uploaded-files/video-slider/CAMDEN%20BUILDING%20AN%20INNOVATION%20ECONOMY.mp4" type="video/mp4">
-      </video>
-    </div>
-  </a>
-
-
-  <button class="video-slider-btn left-side" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="video-slider-btn right-side" onclick="plusDivs(1)">&#10095;</button>
-</div>
-        
-        
-        <h1 style="margin-top: 0px;
-    margin-left: 0;
-    border: 0;
-    font-size: 15px;
-    text-transform: none;">Fotos</h1>
-    <div id="slider">  
-  <div class="slide" >
-    <img src="https://veja.abril.com.br/wp-content/uploads/2016/06/os-vingadores-05032012-14-original1.jpeg" >
-  </div>
-  
-  <div class="slide">
-     <img src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/2/sunset-storm-haystack-rock-canon-beach-oregon-coast-tl-mair.jpg" >
-  </div>
- 
-  <div class="slide">
-    <img src=" https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/1-tourists-at-eiffel-tower-paris-panoramic-images.jpg" >
-  </div>
-  
-  <div class="slide" >
-    <img src="https://dmasia.travel/wp-content/uploads/2019/09/vit3-1000x350.jpg" >
-  </div>
-  
-  <!--Controlling arrows-->
-  <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-chevron-left" aria-hidden="true"></i>
-</span>
-  <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-chevron-right" aria-hidden="true"></i>
-</span>
-</div>
-  <div id="dots-con" style="display: none;">
- <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
- </div>
-    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
-
-</nav>
-  </div>
-         <div class="bg" style="background-position: center;
-    background-size: auto;
-    background-color: #d1d1d1;
-    background-blend-mode: multiply;">
-        <div class="content">
+                <h1 style="/*margin-top: 0px; margin-left: 0; border: 0; font-size: 15px; text-transform: none;*/">Trailer</h1>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/AfHiUtxrmiY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                <!-- Owl Carousel o -->
+                <div style="height: 50px;">
+                    <owl-carousel-o style="height: 50px;" [options]="customOptions" class="ju">
+    <ng-template style="height: 50px;" carouselSlide>
+        <div class="slide" style="height: 50px;">
+        3
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slide">
+        <h1>3</h1> </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slide">
+        <h1>3</h1> </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slide">
+       <h1>1</h1>  </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slide">
+        <h1>1</h1> </div>
+    </ng-template>
+</owl-carousel-o>
+                </div>
+                
+                
+            </nav>
+        </div>
+         
+         
+         
+   <!-- PAinel filme -->
+        <div class="bg" style="background-position: center; background-size: auto; background-color: #d1d1d1; background-blend-mode: multiply;">
+            <div class="content">
           <div class="image">
               <img  style="right: 73%; height: 72%;
-    position: absolute;"src="<%=m.getPoster_Link() %>" />
+    position: absolute;" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg" />
           </div>
           <div class="info">
             <div class="title">
               <a href="#">
-                <h2></h2>
+                <h2>Titulo</h2>
               </a>
-                <span><br></span>
+                <span><br>2021</span>
             </div>
             <div class="meta-actions">
               <div class="score">
                 <div class="percentage-circle">
                   <div class="percentage-circle-stroke">
                     <div class="percent">
-                      <span><sup></sup>
+                      <span><sup>8.9</sup>
                       </span>
                     </div>
                   </div>
@@ -541,28 +490,16 @@ a {
             <div class="about">
               <div class="overview">
                 <h3>Visão geral</h3>
-                <p></p>
+                <p>sinopse do filme sinopse do filme sinopse do filme sinopse do filme sinopse do filme </p>
               </div>
                 
              <div class="movie-data" style="font-size: 18px;">
                  <div class="details" style="border-top: 1px solid rgba(255, 255, 255, 0.07);">
-                     <i class="hd" style="padding: 7px 6px 6px 6px;
-    border-radius: 2px;
-    font-size: 14px;
-    font-weight: 700;
-    text-align: center;
-    margin-right: -1px;
-    color: #fff;
-    background-color: #298eea;
-    /* font-style: italic;*/">ii</i>
-                <span id="Rated" style="display: inline-block;
-    margin: 0 5px;
-    color: #333333;"> Min</span><span>
-        <a href="/years/2019/" rel="tag" style="color: #333333;
-    text-decoration: none;
-    transition: 0.3s ease;
-    opacity: 0.7;">jj</a>
-    </span><span></span>
+                     <i class="hd" style="padding: 7px 6px 6px 6px; border-radius: 2px; font-size: 14px; font-weight: 700; text-align: center; margin-right: -1px; color: #fff; background-color: #298eea;">ii</i>
+                <span id="Rated" style="display: inline-block; margin: 0 5px; color: #333333;"> Min</span><span>
+                <a href="/years/2019/" rel="tag" style="color: #333333; text-decoration: none; transition: 0.3s ease; opacity: 0.7;">jj</a>
+                </span>
+                <span>58</span>
               </div>
             </div>
                 
@@ -572,10 +509,12 @@ a {
       </div>
                 
       </div>
-    </div>
+        </div>
   </div>
           
-</div>
+        </div>
+   
+   <!-- Comentarios -->
         <div class="comments-container">
 		
                 
@@ -696,137 +635,5 @@ a {
 	</div>
 </section>
 
-<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
-
-  
-      <script id="rendered-js" >
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i,
-  x = document.getElementsByClassName("video-slide"),
-  y = document.getElementsByTagName("video");
-
-  if (n > x.length) {
-    slideIndex = 1;
-  }
-
-  if (n < 1) {
-    slideIndex = x.length;
-  }
-
-  for (i = 0; i < x.length; i++) {if (window.CP.shouldStopExecution(0)) break;
-    x[i].style.display = "none";
-    y[i].pause();
-  }window.CP.exitedLoop(0);
-
-  x[slideIndex - 1].style.display = "block";
-
-}
-//# sourceURL=pen.js
-    </script>
-    
-    <script id="rendered-js" >
-var slides = document.querySelectorAll(".slide");
-var dots = document.querySelectorAll(".dot");
-var index = 0;
-
-
-function prevSlide(n) {
-  index += n;
-  console.log("prevSlide is called");
-  changeSlide();
-}
-
-function nextSlide(n) {
-  index += n;
-  changeSlide();
-}
-
-changeSlide();
-
-function changeSlide() {
-
-  if (index > slides.length - 1)
-  index = 0;
-
-  if (index < 0)
-  index = slides.length - 1;
-
-
-
-  for (let i = 0; i < slides.length; i++) {if (window.CP.shouldStopExecution(0)) break;
-    slides[i].style.display = "none";
-
-    dots[i].classList.remove("active");
-
-
-  }window.CP.exitedLoop(0);
-
-  slides[index].style.display = "block";
-  dots[index].classList.add("active");
-
-
-
-}
-//# sourceURL=pen.js
-    </script>
-
-    <script>
-        function enviar_coment(){
-            
-            var x = document.getElementById("cc");
-            //alert(x.value);
-            var idmovie = document.getElementById("id").value ;
-            //alert(idmovie);
-            var idperson = document.getElementById("idc").value;
-            try{
-            var rate = document.querySelector('input[name="rate"]:checked').value;
-            $.ajax({
-   url: 'http://localhost:8080/ASA/comentarios_servlet',
-   method: "POST",
-   dataType:"json",
-   data: {idmovie : idmovie ,
-         idperson : idperson,
-         comentario : x.value,
-         rate : rate
-     }, 
-   success: function(response, textStatus, jqXHR) {
-     //alert("Yay!");
-     $("#r").find("li").remove();
-                        
-     var trHTML = response.responseText;
-     $("#r").append(trHTML);
-   },
-   error: function(jqXHR, textStatus, errorThrown, response){
-     //alert("Erro:"+JSON.stringify(jqXHR.fail()));
-     $("#r").find("li").remove();
-     
-      document.getElementById("cc").value = "";
-      var elements = document.getElementsByTagName("input");
-        for (var i = 0; i < elements.length; i++) {
-        if (elements[i].type === "radio") {
-            elements[i].checked = false;
-        }
-    }
-     var trHTML = jqXHR.responseText;
-     $("#r").append(trHTML);
-  }
-});
-        }catch(e){
-            alert("Rate First");
-        }
-            
-           
-        }
-    </script>
-    
-</body>
-
-</html>
+</div>
  
