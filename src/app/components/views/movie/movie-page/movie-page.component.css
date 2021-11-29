@@ -4,6 +4,9 @@
  * Detalle: #c7cacb
  * Fondo: #dee1e3
  ----------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
  * {
  	margin: 0;
  	padding: 0;
@@ -361,7 +364,6 @@ font-size: 30px;
 
 /* ------------------------------------------------ */
 
-@import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -380,8 +382,7 @@ font-size: 30px;
   font-weight: 300;
   src: url(https://fonts.gstatic.com/s/opensanscondensed/v15/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
 }
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {background-color: #FFF; overflow-x: hidden;
 font-family: Open Sans, sans-serif;}
 .flex { display: -webkit-flex; display: flex; -webkit-flex-direction: row;  flex-direction: row; -webkit-justify-content: flex-start; justify-content: flex-start;}

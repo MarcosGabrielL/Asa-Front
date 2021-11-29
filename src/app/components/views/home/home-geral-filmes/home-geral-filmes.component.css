@@ -19,7 +19,10 @@ font-family: Open Sans, sans-serif;}
     margin-top: 10%;
     max-width: fit-content;
     vertical-align: baseline;}
-.slide-content {width: 25vw; color: #fff; padding:3vw 18vw 3vw 9vw;}
+.slide-content {    width: 33vw;
+    color: #fff;
+    padding: 3vw 1vw 3vw 8vw;
+}
 .slide-date {color: #FF3A3A; font-size: 20px; font-weight: 400; letter-spacing: 0.1vw; padding-bottom: 1.4vw; font-weight: bold;}
 .slide-title {font-size: 17px; font-weight: 400; letter-spacing: 0.1vw; line-height: 1.55vw; padding-bottom: 1.8vw; color: #1b1b1b; font-weight: bold;}
 .slide-text {font-size: 13px; line-height: 1.2vw; opacity: 0.8; padding-bottom: 4vw; color: #1b1b1b;}
@@ -155,8 +158,8 @@ input {
 
 .movie__title {
   font-size: 0.875rem;
-  font-weight: 400;
-  margin: 0;
+  font-weight: 400 !important;
+    margin: 0 ;
 }
 /*-------------------------------Lista de filmes End------------------------------------*/
 

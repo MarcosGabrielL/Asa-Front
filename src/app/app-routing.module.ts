@@ -20,7 +20,7 @@ const routes: Routes = [
     component: HomeComponent,
         children: [
                     {path: '',  component: HomeGeralFilmesComponent, pathMatch: 'full'},
-                    { path: 'filmes/acao', component: HomeAcaoFilmesComponent, pathMatch: 'full'}
+                    { path: 'filmes/:genero', component: HomeAcaoFilmesComponent, pathMatch: 'full'}
                   ]
    },
    {
@@ -44,11 +44,15 @@ const routes: Routes = [
     component: ArtistasHomeComponent
    },
    {
-    path: 'filme',
+    path: 'filme/:id',
     component: MoviePageComponent
    },
    {
     path: 'busca/filme',
+    component: MovieBuscaComponent
+   },
+   {
+    path: 'busca/filme/:id',
     component: MovieBuscaComponent
    }
 ];

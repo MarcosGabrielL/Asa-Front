@@ -1,10 +1,10 @@
 
 <!-- Owl Carousel o -->
 <div class="slider" style="background: #D6D6D6;">
-<owl-carousel-o [options]="customOptions" class="ju">
+<owl-carousel-o [options]="customOptions" class="ju" >
     <ng-template carouselSlide carouselWidth=1200 >
-        <div class="slide" style=" margin-left: 15%; margin-right: 15%">
-            <div class="slide flex">
+        <div class="slide" style=" margin-left: 15%; margin-right: 15%" >
+            <div class="slide flex" [innerHTML]="thePrincipalString">
                 <div class="slide-image slider-link prev" ><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
 		<div class="slide-content">
 			<div class="slide-date">Vingadores: Ultimato</div>
@@ -16,8 +16,8 @@
         </div>
     </ng-template>
     <ng-template carouselSlide>
-        <div class="slide">
-          <div class="slide flex">
+        <div class="slide" style=" margin-left: 15%; margin-right: 15%" >
+          <div class="slide flex" [innerHTML]="thePrincipalString1">
 		<div class="slide-image slider-link prev"><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
 		<div class="slide-content">
 			<div class="slide-date">Vingadores: Ultimato</div>
@@ -29,16 +29,43 @@
         </div>
     </ng-template>
     <ng-template carouselSlide>
-        <div class="slide">
-        <h1>3</h1> </div>
+        <div class="slide" style=" margin-left: 15%; margin-right: 15%" >
+          <div class="slide flex" [innerHTML]="thePrincipalString2">
+		<div class="slide-image slider-link prev"><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">Vingadores: Ultimato</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+        </div>
     </ng-template>
     <ng-template carouselSlide>
-        <div class="slide">
-       <h1>1</h1>  </div>
+         <div class="slide" style=" margin-left: 15%; margin-right: 15%" >
+          <div class="slide flex" [innerHTML]="thePrincipalString3">
+		<div class="slide-image slider-link prev"><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">Vingadores: Ultimato</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+        </div>
     </ng-template>
     <ng-template carouselSlide>
-        <div class="slide">
-        <h1>1</h1> </div>
+        <div class="slide" style=" margin-left: 15%; margin-right: 15%" >
+          <div class="slide flex" [innerHTML]="thePrincipalString4">
+		<div class="slide-image slider-link prev"><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">Vingadores: Ultimato</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+        </div>
     </ng-template>
 </owl-carousel-o>
 </div>
@@ -94,203 +121,37 @@
 			</div>
 		</div> -->
 
+
 <!-- LISTA DE FILMES -->
-<div class="title-bar">
-					<div class="left">
-						<p class="bold">Filmes</p>
-                                                <p class="grey"> / </p>
-						<p class="grey">Todos</p>
-					</div> <!-- left -->
-					<div class="right">
-						<a class="blue" href="#">Avaliação<i class="fa fa-angle-down" style="margin-left: 5px;"></i></a>
-						<a href="#">Mais Recentes</a>
-						<a href="#">Mais Antigos</a>
-					</div> <!-- right -->
-				</div> <!-- title-bar -->
+    <div class="title-bar" >
+        <div class="left" style="    border-left: 8px solid #FF3A3A;
+    line-height: 40px;">
+            <p class="bold">Filmes em Breve</p>
+        </div> <!-- left -->
+
+    </div> <!-- title-bar -->
+
 <div id="root">
    <div data-reactroot="" class="app">
-      <ul class="movies" style="margin: 5%;">
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/34nDCQZwaEvsy4CFO5hkGRFDCVU.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">8</span></figcaption>
-                  <h2 class="movie__title">The Tomorrow War</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/iXbWpCkIauBMStSTUT9v4GXvdgH.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">8</span></figcaption>
-                  <h2 class="movie__title">The Suicide Squad</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">8</span></figcaption>
-                  <h2 class="movie__title">Shang-Chi and the Legend of the Ten Rings</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/9dKCd55IuTT5QRs989m9Qlb7d2B.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">7.9</span></figcaption>
-                  <h2 class="movie__title">Jungle Cruise</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/ic0intvXZSfBlYPIvWXpU1ivUCO.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">8</span></figcaption>
-                  <h2 class="movie__title">PAW Patrol: The Movie</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/cP7odDzzFBD9ycxj2laTeFWGLjD.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">6.9</span></figcaption>
-                  <h2 class="movie__title">Sweet Girl</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">7.8</span></figcaption>
-                  <h2 class="movie__title">Black Widow</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">7.4</span></figcaption>
-                  <h2 class="movie__title">Space Jam: A New Legacy</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/92wWZAzHPrvEKSpIJxGeMmImHOf.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">8.9</span></figcaption>
-                  <h2 class="movie__title">After We Fell</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/acCS12FVUQ7blkC8qEbuXbsWEs2.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">7.8</span></figcaption>
-                  <h2 class="movie__title">Free Guy</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/hRMfgGFRAZIlvwVWy8DYJdLTpvN.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">7.5</span></figcaption>
-                  <h2 class="movie__title">Don't Breathe 2</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/oxNoVgbu2v9ETL93Kri1pw8osYf.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">6.9</span></figcaption>
-                  <h2 class="movie__title">Breathless</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/7p0O4mKYLIhU2E5Zcq9Z3vOZ4e9.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">7.1</span></figcaption>
-                  <h2 class="movie__title">Narco Sub</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/1ho7YYp1DvCke9I1D3Olbh2Px63.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">6.7</span></figcaption>
-                  <h2 class="movie__title">Rogue Hostage</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/wrlQnKHLCBheXMNWotyr5cVDqNM.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">8.3</span></figcaption>
-                  <h2 class="movie__title">Eggs Run</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">7.6</span></figcaption>
-                  <h2 class="movie__title">F9</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/kv2Qk9MKFFQo4WQPaYta599HkJP.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">7.8</span></figcaption>
-                  <h2 class="movie__title">The Boss Baby: Family Business</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/jTswp6KyDYKtvC52GbHagrZbGvD.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">8.1</span></figcaption>
-                  <h2 class="movie__title">Luca</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/niw2AKHz6XmwiRMLWaoyAOAti0G.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">7.5</span></figcaption>
-                  <h2 class="movie__title">Infinite</h2>
-               </figure>
-            </div>
-         </li>
-         <li>
-            <div class="movie">
-               <figure class="movie__figure">
-                  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/zvGC5jX5wQmU1GgPc0VGZz7Mtcs.jpg" class="movie__poster">
-                  <figcaption><span class="movie__vote">8.5</span></figcaption>
-                  <h2 class="movie__title">El mesero</h2>
-               </figure>
-            </div>
-         </li>
+      <ul class="movies" style="margin: 5%; " [innerHTML]="theUpcomingString">
+         
       </ul>
    </div>
 </div>
+                                
+<!-- LISTA DE FILMES -->
+    <div class="title-bar" style="padding-top: 0px; ">
+        <div class="left" style="    border-left: 8px solid #FF3A3A;
+    line-height: 40px;">
+            <p class="bold">Outros Populares</p>
+        </div> <!-- left -->
 
+    </div> <!-- title-bar -->                              
+
+    <div id="root">
+   <div data-reactroot="" class="app">
+      <ul class="movies" style="margin: 5%;" [innerHTML]="theTradingString">
+         
+      </ul>
+   </div>
+</div>
