@@ -13,6 +13,9 @@ import { NoticiasHomeComponent } from './components/views/noticias/noticias-home
 import { ListasHomeComponent } from './components/views/listas/listas-home/listas-home.component';
 import { ArtistasHomeComponent } from './components/views/artistas/artistas-home/artistas-home.component';
 
+import { LoginComponent } from './components/security/login/login.component';
+import { HttpInterceptorService } from './components/security/httpInterceptor.service';
+
 const routes: Routes = [
    { path: '', redirectTo: '/home', pathMatch: 'full' },
    {
@@ -29,7 +32,8 @@ const routes: Routes = [
    },
    {
     path: 'home-cinefilo',
-    component: CinefiloHomeComponent
+    component: CinefiloHomeComponent,
+    canActivate: [ HttpInterceptorService ]
    },
    {
     path: 'home-noticias',
@@ -54,7 +58,9 @@ const routes: Routes = [
    {
     path: 'busca/filme/:id',
     component: MovieBuscaComponent
-   }
+   },
+    {path: 'login', component: LoginComponent},
+    {path: 'logout', component: LoginComponent},
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,6 +47,8 @@ import { MoviePageComponent } from './components/views/movie/movie-page/movie-pa
 import { LoginComponent } from './components/security/login/login.component';
 import { RegisterComponent } from './components/security/register/register.component';
 import { ForgotComponent } from './components/security/forgot/forgot.component';
+
+import { HttpInterceptorService } from './components/security/httpInterceptor.service';
 
 @NgModule({
   declarations: [
@@ -99,7 +101,13 @@ import { ForgotComponent } from './components/security/forgot/forgot.component';
     BrowserAnimationsModule,
     CarouselModule, 
   ],
-  providers: [],
+  providers: [
+     {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
+    }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

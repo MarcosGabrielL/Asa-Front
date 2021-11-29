@@ -80,6 +80,9 @@
 					<li><a href="#">Noticias</a></li>
 					<li><a href="#">Usuario</a></li>
 					<li><a href="#">Artistas</a></li>
+                                            <li>
+                <a *ngIf="isLoggedIn" class="nav-link" href="/logout" (click)=handleLogout()>Logout</a>
+            </li>
 				</ul>
 
 			</div>	
