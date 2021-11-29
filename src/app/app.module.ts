@@ -44,6 +44,9 @@ import { ListasHomeComponent } from './components/views/listas/listas-home/lista
 import { ArtistasHomeComponent } from './components/views/artistas/artistas-home/artistas-home.component';
 import { MovieBuscaComponent } from './components/views/movie/movie-busca/movie-busca.component';
 import { MoviePageComponent } from './components/views/movie/movie-page/movie-page.component';
+import { LoginComponent } from './components/security/login/login.component';
+import { RegisterComponent } from './components/security/register/register.component';
+import { ForgotComponent } from './components/security/forgot/forgot.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +75,10 @@ import { MoviePageComponent } from './components/views/movie/movie-page/movie-pa
     ListasHomeComponent,
     ArtistasHomeComponent,
     MovieBuscaComponent,
-    MoviePageComponent
+    MoviePageComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgotComponent
   ],
   imports: [
     BrowserModule,
