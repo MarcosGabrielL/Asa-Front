@@ -14,6 +14,7 @@ import { ListasHomeComponent } from './components/views/listas/listas-home/lista
 import { ArtistasHomeComponent } from './components/views/artistas/artistas-home/artistas-home.component';
 
 import { LoginComponent } from './components/security/login/login.component';
+import { RegisterComponent } from './components/security/register/register.component';
 import { HttpInterceptorService } from './components/security/httpInterceptor.service';
 
 const routes: Routes = [
@@ -60,6 +61,7 @@ const routes: Routes = [
     component: MovieBuscaComponent
    },
     {path: 'login', component: LoginComponent},
+    {path: 'register', component: RegisterComponent},
     {path: 'logout', component: LoginComponent},
 ];
 

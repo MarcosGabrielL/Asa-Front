@@ -1,6 +1,24 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
+<style>
+    
+    @media screen and (max-width: 1220px) {
+  .window > .sidebar {
+    transform: translateX(-250px) !important;
+  }
+  .window > .main {
+    margin-left: 0;
+  }
+  .sidebar-is-open .window > .sidebar {
+    transform: translateX(0);
+  }
+  .sidebar-is-open .window > .main {
+    transform: translateX(250px);
+  }
+}
+</style>
+
 <!-- Toolbar -->
 <div class="window-margin">
 	<div class="window">
@@ -15,41 +33,35 @@
      
 
 			<div class="top-bar">
-	<input type="text" placeholder="Buscar Filme ..." style="
-	        align-content: floa;
-	    /* float: right; */
-	    background: #e8e8e8;
-	    /* height: 30px; */
-	    /* width: 30px; */
-	    border-radius: 10px;
-	    display: block;
-	    float: right;
-	    margin-top: 10px;
-	    width: 15%;
-	    height: 10px;
-	    border: 0;
-	    padding: 10px 20px;
-	    outline: none;
-	    color: #999;
-	    transition-duration: 0.3s;
-	    margin-right: 10px;
-	"/>
-	<p class="fa fa-search" style="
-	    /* position: absolute; */
-	    top: 17px;
-	    right: 10px;
-	    color: #1b1b1b;
-	    float: right;
-	    transition-duration: 0.3s;
-	    cursor: pointer;
-	    /* padding: 10px 20px; */
-	    position: absolute;
-	    margin-right: 10px;
+                            <form><input (keyup.enter)="onKeyUp1()" [(ngModel)]="nome1" name="nome1" id="nome1" type="text" placeholder="Buscar Filme ..." style="
+	        background: #e8e8e8;
+    border-radius: 10px;
+    display: block;
+    float: right;
+    margin-top: 8px;
+    width: 30%;
+    height: 60%;;
+    border: 0;
+    padding: 10px 20px;
+    outline: none;
+    color: #999;
+    transition-duration: 0.3s;
+    margin-right: 10px;
+	"/></form>
+	<p (click)=onKeyUp1() class="fa fa-search" style="
+	    top: 20px;
+    right: 10px;
+    color: #1b1b1b;
+    float: right;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    position: absolute;
+    margin-right: 13px;
 	"></p>
-				<div class="profile-box onclick-menu" tabindex="0">
-                                    <div class="circle" routerLink="home-cinefilo">
+				<div  class="profile-box onclick-menu" tabindex="0">
+                                    <div *ngIf="isLoggedIn" class="circle">
                                     </div>
-                                    <span class="arrow1 fa fa-angle-down">
+                                    <span *ngIf="isLoggedIn" class="arrow1 fa fa-angle-down">
                                     </span>
                                     <ul class="onclick-menu-content" style="    margin-top: 49px;">
         <li><button onclick="alert('click 1')" style="
@@ -65,8 +77,27 @@
         <li><button onclick="alert('click 2')">no JavaScript!</button></li>
         <li><button onclick="alert('click 3')">Pretty nice, right?</button></li>
     </ul>
-				</div>
+				<div *ngIf="!isLoggedIn" routerLink="login">
+                                            <a routerLink="login">
+                                                <span routerLink="login" style="font-size: 14px; 
+                                                font-weight: bold; 
+                                                padding: 8px 30px;
+                                                background: #fffc45;
+                                                color: #515151;
+                                                border-radius: 10px;
+                                                margin-right: 0px;
+                                                height: 32px;
+                                                border: none;">
+                                                Sign In
+                                            </span>
+                                            </a>
+                                            
+                                            </div>
+                                
+                                </div>
 
+        
+                                
 
 				<ul class="top-menu">
 					<li class="menu-icon trigger-sidebar-toggle">
@@ -89,6 +120,9 @@
 					<li #my5li
                                             (click)="myli.classList.remove('active'); my2li.classList.remove('active'); my3li.classList.remove('active'); my4li.classList.remove('active');my5li.classList.add('active') ">
                                             <a routerLink="home-artistas">Artistas</a></li>
+                                          <li>
+                <a *ngIf="isLoggedIn" class="nav-link" href="/logout" (click)=handleLogout()>Logout</a>
+            </li>
 				</ul>
 
 			</div>	

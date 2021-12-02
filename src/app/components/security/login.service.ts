@@ -1,27 +1,33 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
- // BASE_PATH: 'http://localhost:8080'
+  baseUrl: String = environment.baseUrl;
   USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser'
 
   public username: string = "";
   public password: string = "";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _snack: MatSnackBar) { }
 
-    authenticationService(username: string, password: string) {
-        return this.http.get(`http://localhost:8080/api/v1/basicauth`,
-          { headers: { authorization: this.createBasicAuthToken(username, password) } }).pipe(map((res) => {
-            this.username = username;
+    authenticationService(request: any) {
+       /* console.log("User: " + email + " Senha: " + password);
+        return this.http.post(`${this.baseUrl}/authenticate`,
+          { headers: { authorization: this.createBasicAuthToken(email, password) } }).pipe(map((res) => {
+            this.username = email;
             this.password = password;
-            this.registerSuccessfulLogin(username, password);
-          }));
+            this.registerSuccessfulLogin(email, password);
+          }));*/
+          
+           return this.http.post<String>(`${this.baseUrl}/authenticate`, request, {  responseType: 'text' as 'json' });
+      
       }
 
       createBasicAuthToken(username: string, password: string) {
@@ -49,4 +55,12 @@ export class LoginService {
         if (user === null) return ''
         return user
       }
+
+      mensagem(str: String): void {
+        this._snack.open(`${str}`, 'OK', {
+          horizontalPosition: 'end',
+          verticalPosition: 'top',
+          duration: 4000
+        })
+        }
 }

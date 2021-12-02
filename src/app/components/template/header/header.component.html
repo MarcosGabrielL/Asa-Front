@@ -46,7 +46,7 @@
 	    position: absolute;
 	    margin-right: 10px;
 	"></p>
-				<div class="profile-box onclick-menu" tabindex="0">
+				<div *ngIf="isLoggedIn" class="profile-box onclick-menu" tabindex="0">
                                     <div class="circle">
                                     </div>
                                     <span class="arrow1 fa fa-angle-down">
@@ -67,6 +67,21 @@
     </ul>
 				</div>
 
+        
+                                <div onclick="location.href='http://localhost:8080/ASA/UI/login_cinefilo.jsp';">
+                                            <a href="http://localhost:8080/ASA/UI/login_cinefilo.jsp">
+                                                <span href="http://localhost:8080/ASA/UI/login_cinefilo.jsp" style="font-size: 14px; 
+                                                font-weight: bold; padding: 6px 30px;
+                                                background: #fffc45;
+                                                color: #515151;
+                                                border-radius: 30px;
+                                                margin-right: 0px;
+                                                border: none;">
+                                                Sign In
+                                            </span>
+                                            </a>
+                                            
+                                            </div>
 
 				<ul class="top-menu">
 					<li class="menu-icon trigger-sidebar-toggle">

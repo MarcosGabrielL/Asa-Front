@@ -1,6 +1,30 @@
 <title>Asa - Filmes Populares</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
+<style>
+    @media screen and (max-width: 1220px) {
+  .window > .sidebar {
+    transform: translateX(-250px) !important;
+  }
+  .side{
+    transform: translateX(-250px) !important;
+  }
+  .window > .main {
+    margin-left: 0;
+  }
+  .sidebar-is-open .window > .sidebar {
+    transform: translateX(0);
+  }
+  .sidebar-is-open .window > .main {
+    transform: translateX(250px);
+  }
+  .nave {
+   -webkit-transform: translateX(-250px);
+    width: 100%;
+  }
+}
+</style>
+
 <!-- Nav -->
 <mat-sidenav-container class="container">
     <mat-sidenav class="side" mode="side" opened>
@@ -41,7 +65,7 @@
 		</aside>
     </mat-sidenav>
 
-    <mat-sidenav-content>
+    <mat-sidenav-content class="nave">
         <router-outlet>
             
         </router-outlet>

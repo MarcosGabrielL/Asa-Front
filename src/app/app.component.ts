@@ -1,15 +1,42 @@
-import { Component } from '@angular/core';
-import { Router } from "@angular/router";
-import {ViewChild, ElementRef } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { LoginService } from './components/security/login.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'asafrontapp';
+export class AppComponent implements OnInit  {
+  title = 'ASA';
 
-     constructor( private router: Router) { }
+isLoggedIn = false;
+    nome1: string="";  
 
+     constructor( private router: Router,
+                  private route: ActivatedRoute,
+                  private authenticationService: LoginService) { }
+                  
+       ngOnInit() {
+        this.isLoggedIn = this.authenticationService.isUserLoggedIn();
+        console.log('menu ->' + this.isLoggedIn);
+      }
+
+    handleLogout() {
+        this.authenticationService.logout();
+      }
+
+       onKeyUp(ev:KeyboardEvent) {
+    // do something meaningful with it
+    console.log(`The user just pressed ${ev}!`);
+    let urlbusca = 'busca/filme/';
+    this.router.navigate([urlbusca.concat(this.nome1)]);
+    //this.GetMovie(this.nome1);
+  }
+       onKeyUp1() {
+    // do something meaningful with it
+    let urlbusca = 'busca/filme/';
+    this.router.navigate([urlbusca.concat(this.nome1)]);
+    //this.GetMovie(this.nome1);
+  }
 }

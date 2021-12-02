@@ -47,7 +47,6 @@ import { MoviePageComponent } from './components/views/movie/movie-page/movie-pa
 import { LoginComponent } from './components/security/login/login.component';
 import { RegisterComponent } from './components/security/register/register.component';
 import { ForgotComponent } from './components/security/forgot/forgot.component';
-
 import { HttpInterceptorService } from './components/security/httpInterceptor.service';
 
 @NgModule({
@@ -99,7 +98,7 @@ import { HttpInterceptorService } from './components/security/httpInterceptor.se
     ReactiveFormsModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    CarouselModule, 
+    CarouselModule,
   ],
   providers: [
      {

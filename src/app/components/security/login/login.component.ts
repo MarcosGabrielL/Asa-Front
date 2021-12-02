@@ -9,12 +9,17 @@ import { LoginService } from '../login.service';
 })
 export class LoginComponent implements OnInit {
 
-  username: string = "";
+  email: string = "";
   password : string = "";
   errorMessage = 'Invalid Credentials';
   successMessage: string = "";
   invalidLogin = false;
   loginSuccess = false;
+
+    authRequest:any ={
+    "email":"email",
+    "password":"pass"
+  };
 
   constructor(
     private route: ActivatedRoute,
@@ -26,14 +31,24 @@ export class LoginComponent implements OnInit {
   }
     
     handleLogin() {
-    this.authenticationService.authenticationService(this.username, this.password).subscribe((result)=> {
+    
+    this.authRequest={
+    "email":this.email,
+    "password":this.password
+  };
+
+    this.authenticationService.authenticationService(this.authRequest).subscribe((result)=> {
       this.invalidLogin = false;
       this.loginSuccess = true;
+      this.authenticationService.createBasicAuthToken(this.email, this.password);
+      this.authenticationService.registerSuccessfulLogin(this.email, this.password);
       this.successMessage = 'Login Successful.';
-      this.router.navigate(['/hello-world']);
+      this.authenticationService.mensagem(this.successMessage);
+      this.router.navigate(['/home-cinefilo']);
     }, () => {
       this.invalidLogin = true;
       this.loginSuccess = false;
+      this.authenticationService.mensagem(this.errorMessage);
     });      
   }
 }

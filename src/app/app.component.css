@@ -407,7 +407,7 @@ a:hover {
 }
 @media only screen and (max-width: 1220px) {
   .window > .sidebar {
-    transform: translateX(-250px);
+    transform: translateX(-250px) !important;
   }
   .window > .main {
     margin-left: 0;
