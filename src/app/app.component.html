@@ -59,7 +59,7 @@
     margin-right: 13px;
 	"></p>
 				<div  class="profile-box onclick-menu" tabindex="0">
-                                    <div *ngIf="isLoggedIn" class="circle">
+                                    <div *ngIf="isLoggedIn" routerLink="login" class="circle">
                                     </div>
                                     <span *ngIf="isLoggedIn" class="arrow1 fa fa-angle-down">
                                     </span>
@@ -121,7 +121,7 @@
                                             (click)="myli.classList.remove('active'); my2li.classList.remove('active'); my3li.classList.remove('active'); my4li.classList.remove('active');my5li.classList.add('active') ">
                                             <a routerLink="home-artistas">Artistas</a></li>
                                           <li>
-                <a *ngIf="isLoggedIn" class="nav-link" href="/logout" (click)=handleLogout()>Logout</a>
+                <a *ngIf="isLoggedIn" class="nav-link"  (click)=handleLogout()>Logout</a>
             </li>
 				</ul>
 

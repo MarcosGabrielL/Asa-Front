@@ -112,3 +112,8 @@ export interface Video{
 export interface ResultVideo{
      videos: Video[] ;
 }
+
+export interface Comentario{
+      
+     idmovie: string;
+}

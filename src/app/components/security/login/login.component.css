@@ -8,7 +8,7 @@
 }
 
 body {
-	background: linear-gradient(90deg, #C7C5F4, #776BCC);		
+		
 }
 
 .container {
@@ -16,13 +16,14 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
+            background: linear-gradient(90deg, #d7d7d7, #d1d1d1);	
 }
 
 .screen {		
-	background: linear-gradient(90deg, #333333, #444444);		
+	background: linear-gradient(90deg, #333333, #000);		
 	position: relative;	
 	height: 600px;
-	    width: 36%;	
+	    width: 30%;	
 	box-shadow: 0px 0px 24px #000000;
 }
 
@@ -60,7 +61,7 @@ body {
 .screen__background__shape2 {
 	height: 220px;
 	width: 220px;
-	background: linear-gradient(200deg, #FF3A3A, #333333);	
+	background: linear-gradient(200deg, #000, #333333);	
 	top: -172px;
 	right: 0;	
 	border-radius: 32px;
@@ -69,7 +70,7 @@ body {
 .screen__background__shape3 {
 	height: 540px;
 	width: 190px;
-	background: linear-gradient(200deg, #FF3A3A, #333333);
+	background: linear-gradient(200deg, #000, #333333);
 	top: -24px;
 	right: 0;	
 	border-radius: 32px;
@@ -78,7 +79,7 @@ body {
 .screen__background__shape4 {
 	height: 400px;
 	width: 200px;
-	background: linear-gradient(200deg, #FF3A3A, #333333);	
+	background: linear-gradient(200deg, #000, #333333);	
 	top: 420px;
 	right: 50px;	
 	border-radius: 60px;
@@ -126,14 +127,14 @@ body {
     margin-top: 30px;
     padding: 16px 20px;
     border-radius: 26px;
-    border: 1px solid #D4D3E8;
+    border: 1px solid #000;
     text-transform: uppercase;
     font-weight: 700;
     display: flex;
     align-items: center;
     width: 100%;
     color: #000;
-    box-shadow: 0px 2px 2px #000000;
+    /*box-shadow: 0px 2px 2px #000000;*/
     cursor: pointer;
     transition: .2s;
 }
@@ -165,6 +166,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+            font-size: 23px;
 }
 
 .social-login__icon {

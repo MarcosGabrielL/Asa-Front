@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
 
+import { ComentarioService } from '../comentario.service';
 import { MovieService } from '../movie.service';
 import { MovieDetails } from '../movie.model';
 import { Credits } from '../movie.model';
@@ -13,6 +14,7 @@ import { ReleaseDateResult } from '../movie.model';
 import { ResultVideo } from '../movie.model';
 import { Video } from '../movie.model';
 import { Genre } from '../movie.model';
+import { Comentario } from '../movie.model';
 
 @Component({
   selector: 'app-movie-page',
@@ -23,7 +25,7 @@ import { Genre } from '../movie.model';
 
 export class MoviePageComponent implements OnInit {
 
-  constructor(private service: MovieService,  private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
+  constructor(private comentarioservice : ComentarioService , private service: MovieService,  private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
     
     moviedetails: MovieDetails[] = [];
     credits: Credits[] = [];
@@ -34,6 +36,7 @@ export class MoviePageComponent implements OnInit {
     video: Video[] = []
     generos: Genre[] = []
     generosString: string = "";
+    comentario: Comentario[] = [];
 
     idmovie: string = "";
 
@@ -45,11 +48,15 @@ export class MoviePageComponent implements OnInit {
     overviewString: string = "";
     runtimeString: string = "";
     thecastString: string = "";
+    thecomentarioString: string = "";
+
+    coment: Comentario = {"idmovie": ""};
     
 
   ngOnInit(): void {
     this.idmovie = this.route.snapshot.paramMap.get("id")!;
     this.GetDetails();
+    this.getcomentarios();
   }
 
     GetDetails(){
@@ -136,4 +143,68 @@ export class MoviePageComponent implements OnInit {
         });
         
     }
+
+	
+    
+
+    getcomentarios(){
+	this.comentario = Object.values(this.comentarioservice.getComentariosByIdMovie(this.idmovie));
+	this.showcomentarios();
+    }
+
+showcomentarios(){
+	 this.thecomentarioString = "";
+            let cont = 0;
+        this.comentario.forEach( (a) => {
+          
+                this.thecomentarioString = this.thecomentarioString.concat
+                ("<div class=\"comment-main-level\" style=\"width: 85%; float: left;\">\n" +
+"					<!-- Avatar -->\n" +
+"					<div class=\"comment-avatar\"><img src=\"https://image.tmdb.org/t/p/w300_and_h450_bestv2//cc0kXVI82iosBRA7HoG7lVuUeRh.jpg\" alt=\"\"></div>\n" +
+"					<!-- Contenedor del Comentario -->\n" +
+"                                        <div class=\"comment-box\" style=\"width: 67%;float: left;\"> \n" +
+"						<div class=\"comment-head\">\n" +
+"							<h6 style=\"margin-top: 3px; \" class=\"comment-name by-author\"><a href=\"\">dd</a>\n" +
+"                                                        <a   style=\"text-decoration: none;\n" +
+"                                                                            content: '7.5';\n" +
+"                                                                            background: #FF3A3A;\n" +
+"                                                                            color: #FFF;\n" +
+"                                                                            font-size: 12px;\n" +
+"                                                                            padding: 3px 5px;\n" +
+"                                                                            font-weight: 700;\n" +
+"                                                                            border-radius: 3px;\n" +
+"                                                                            margin-left: 10px;\">dd/10</a></h6>\n" +
+"                                                        <span style=\"margin-top: 3px; top:0px;\">hh</span>\n" +
+"							<i class=\"fa fa-star\"></i>\n" +
+"                                                        <i class=\"fa fa-star\"></i>\n" +
+"                                                        <i class=\"fa fa-star\"></i>\n" +
+"                                                        <i class=\"fa fa-star\"></i>\n" +
+"                                                        <i class=\"fa fa-star\"></i>\n" +
+"                                                        <a   style=\"text-decoration: none;\n" +
+"                                                                            content: '7.5';\n" +
+"                                                                                float: right;\n" +
+"                                                                            background: #298eea;\n" +
+"                                                                            color: #FFF;\n" +
+"                                                                            font-size: 12px;\n" +
+"                                                                            padding: 3px 5px;\n" +
+"                                                                            font-weight: 700;\n" +
+"                                                                            border-radius: 3px;\n" +
+"                                                                            margin-left: 10px;\">ut/10</a>\n" +
+"						</div>\n" +
+"						<div style=\"padding-top: 0px;\" class=\"comment-content\">juyt</div>\n" +
+"					</div>\n" +
+"				</div>");
+            
+        });
+        
+    }
+
+	enviar_coment(){
+
+	//Peva valores do form e envia
+	this.comentarioservice.create(this.coment);
+	this.getcomentarios();
+	}
+
+
 }

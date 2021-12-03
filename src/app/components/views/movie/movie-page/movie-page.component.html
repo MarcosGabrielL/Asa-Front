@@ -543,7 +543,7 @@ a {
     </form>
                     <div class="button-group pull-right" style="    margin-right: 31%;">
                         <p class="counter" style="float: left; margin: 8px;">2500</p>
-                        <a onclick="enviar_coment();"  style="text-decoration: none;
+                        <a (click)=enviar_coment()  style="text-decoration: none;
     width: 70px;
     line-height: 32px;
     cursor: pointer;
@@ -561,11 +561,11 @@ a {
     </ul>
   </div>
                 <!-- COMMENT BOX END -->
-		<ul style="width: 96%;" id="r" class="comments-list">
+		<ul style="width: 96%;" id="r" class="comments-list" >
                <h1 style="border-left: none !important;margin-bottom: 17px; margin-left: 80px;">Reviews<a href=""></a></h1>
 		
                
-                    <li>
+                    <li [innerHTML]="thecomentarioString">
 				<div class="comment-main-level" style="width: 85%; float: left;">
 					<!-- Avatar -->
 					<div class="comment-avatar"><img src="http://localhost:8080/ASA/avatarServlet?id=<%=c.getID_Cinefilo() %>" alt=""></div>

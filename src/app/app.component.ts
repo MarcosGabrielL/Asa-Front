@@ -24,6 +24,7 @@ isLoggedIn = false;
 
     handleLogout() {
         this.authenticationService.logout();
+	this.router.navigate(['/login']);
       }
 
        onKeyUp(ev:KeyboardEvent) {
