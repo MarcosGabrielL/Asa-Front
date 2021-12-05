@@ -248,8 +248,16 @@ font-size: 30px;
 }
 
 .comment-box .comment-name.by-author, .comment-box .comment-name.by-author a {color: #FF3A3A;}
-
-
+.comment-box .ava{
+    text-decoration: none;content: '7.5';background: #FF3A3A; color: #fff !important;font-size: 12px;
+    padding: 6px 6px;font-weight: 700;border-radius: 3px;margin-left: 10px;
+}
+.comment-box .usava{
+text-decoration: none; content: '7.5';float: right;background: #298eea;color: #FFF;font-size: 12px;
+padding: 3px 5px;font-weight: 700;border-radius: 3px;margin-left: 10px;
+}
+.comment-box{width: 67%;float: left;}
+.comment-main-level{width: 85%; float: left;}
 /** =====================
  * Responsive
  ========================*/

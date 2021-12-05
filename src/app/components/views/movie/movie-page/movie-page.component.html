@@ -526,18 +526,18 @@ a {
                 <div class="container" style="width: 100%; float: left;">
                     <form id="myForm" style="    width: 70%; float: left;">
       <div class="form-group">
-          <textarea id="cc" style="height: 120px;" class="form-control status-box" rows="3" placeholder="Enter your comment here..."></textarea>
+          <textarea [(ngModel)]="Avaliacao" [ngModelOptions]="{standalone: true}" id="cc" style="height: 120px;" class="form-control status-box" rows="3" placeholder="Enter your comment here..."></textarea>
       </div>
-                        <div class="rate" style="float: right;">
-    <input type="radio" id="star5" name="rate" value="5" />
+                        <div  class="rate" style="float: right;">
+    <input [(ngModel)]="critica" type="radio" id="star5" name="rate" [value]="5" />
     <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
+    <input [(ngModel)]="critica" type="radio" id="star4" name="rate" [value]="4" />
     <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
+    <input [(ngModel)]="critica" type="radio" id="star3" name="rate" [value]="3" />
     <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
+    <input [(ngModel)]="critica" type="radio" id="star2" name="rate" [value]="2" />
     <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
+    <input [(ngModel)]="critica" type="radio" id="star1" name="rate" [value]="1" />
     <label for="star1" title="text">1 star</label>
   </div>           
     </form>
@@ -559,50 +559,13 @@ a {
     </div>
     <ul class="posts">
     </ul>
-  </div>
+  </div>     
                 <!-- COMMENT BOX END -->
 		<ul style="width: 96%;" id="r" class="comments-list" >
+              
                <h1 style="border-left: none !important;margin-bottom: 17px; margin-left: 80px;">Reviews<a href=""></a></h1>
-		
-               
-                    <li [innerHTML]="thecomentarioString">
-				<div class="comment-main-level" style="width: 85%; float: left;">
-					<!-- Avatar -->
-					<div class="comment-avatar"><img src="http://localhost:8080/ASA/avatarServlet?id=<%=c.getID_Cinefilo() %>" alt=""></div>
-					<!-- Contenedor del Comentario -->
-                                        <div class="comment-box" style="width: 67%;float: left;"> 
-						<div class="comment-head">
-							<h6 style="margin-top: 3px; " class="comment-name by-author"><a href="">dd</a>
-                                                        <a   style="text-decoration: none;
-                                                                            content: '7.5';
-                                                                            background: #FF3A3A;
-                                                                            color: #FFF;
-                                                                            font-size: 12px;
-                                                                            padding: 3px 5px;
-                                                                            font-weight: 700;
-                                                                            border-radius: 3px;
-                                                                            margin-left: 10px;">dd/10</a></h6>
-                                                        <span style="margin-top: 3px; top:0px;">hh</span>
-							<i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <a   style="text-decoration: none;
-                                                                            content: '7.5';
-                                                                                float: right;
-                                                                            background: #298eea;
-                                                                            color: #FFF;
-                                                                            font-size: 12px;
-                                                                            padding: 3px 5px;
-                                                                            font-weight: 700;
-                                                                            border-radius: 3px;
-                                                                            margin-left: 10px;">ut/10</a>
-						</div>
-						<div style="padding-top: 0px;" class="comment-content">juyt</div>
-					</div>
-				</div>
-			</li>
+               <div [innerHTML]="thecomentarioString"></div>
+                   
 		</ul>
                 <!-- Contenedor lado -->
 <div class="lado">

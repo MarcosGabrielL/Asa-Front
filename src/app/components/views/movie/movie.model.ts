@@ -115,5 +115,21 @@ export interface ResultVideo{
 
 export interface Comentario{
       
-     idmovie: string;
+          id: number;
+       //@Column(nullable = false)
+         critica: string;
+       //@Column(nullable = false)
+        idmovie: string;
+       //@Column(nullable = false)
+        idcinefilo: string;
+       //@Column(nullable = false)
+        data?: string;
+       //@Column(nullable = false)
+        avaliação?: String;
+        curtidas_1_estrela?: String;
+        curtidas_2_estrela?: String;
+        curtidas_3_estrela?: String;
+        curtidas_4_estrela?: String;
+        curtidas_5_estrela?: String;
+        score?: String ;
 }

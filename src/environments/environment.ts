@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-   baseUrl : 'https://asa-moviedb.herokuapp.com'
+   baseUrl : 'http://localhost:8080'
 };
 
 /*

@@ -3,6 +3,7 @@ import { MovieBuscaService } from './movie-busca.service';
 import { map } from 'rxjs/operators';
 import { Result} from './result.model';
 import { Root } from './root.model';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-busca',
@@ -17,10 +18,13 @@ export class MovieBuscaComponent implements OnInit {
     root: Root[] = [];
     nome1: string="";    
     theHtmlString: string="";
-  constructor(private service: MovieBuscaService) { }
+  constructor(private service: MovieBuscaService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-       this.Get20Popular();
+	if(null != this.route.snapshot.paramMap.get("id")){
+	this.GetMovie(this.route.snapshot.paramMap.get("id")!)
+	}else{
+       this.Get20Popular();}
   }
 
     // initially get the most popular movies list's first page

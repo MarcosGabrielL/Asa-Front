@@ -3,6 +3,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
+import { formatDate } from "@angular/common";
+import { Observable } from 'rxjs';
 
 import { ComentarioService } from '../comentario.service';
 import { MovieService } from '../movie.service';
@@ -16,6 +18,11 @@ import { Video } from '../movie.model';
 import { Genre } from '../movie.model';
 import { Comentario } from '../movie.model';
 
+import { LoginService } from '../../../security/login.service';
+import { UserService } from '../../cinefilo/user.service';
+import { User } from '../../cinefilo/user.model';
+import { Cinefilo } from '../../cinefilo/cinefilo.model';
+import { CinefiloService } from '../../cinefilo/cinefilo.service';
 @Component({
   selector: 'app-movie-page',
   templateUrl: './movie-page.component.html',
@@ -25,7 +32,10 @@ import { Comentario } from '../movie.model';
 
 export class MoviePageComponent implements OnInit {
 
-  constructor(private comentarioservice : ComentarioService , private service: MovieService,  private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
+  constructor(private comentarioservice : ComentarioService , private service: MovieService,  private route: ActivatedRoute, private sanitizer: DomSanitizer,
+            private authenticationService: LoginService,
+            private cinefiloservice : CinefiloService,
+              private userservice : UserService) { }
     
     moviedetails: MovieDetails[] = [];
     credits: Credits[] = [];
@@ -49,9 +59,43 @@ export class MoviePageComponent implements OnInit {
     runtimeString: string = "";
     thecastString: string = "";
     thecomentarioString: string = "";
+    tempo: string = "";
+    hora: string = "";
 
-    coment: Comentario = {"idmovie": ""};
-    
+    user: User[] = [];
+    cinefilo: Cinefilo[] = [];
+    email: string = "";
+    usuario: User = {"id": 0, "email": "", "password": "","firstName":"", "lastName":""}
+
+    coment: Comentario = {"id": 0,
+                            //@Column(nullable = false)
+                            "critica": "",
+                            //@Column(nullable = false)
+                            "idmovie": "",
+                            //@Column(nullable = false)
+                            "idcinefilo": "",
+                            //@Column(nullable = false)
+                            "data": "",
+                            //@Column(nullable = false)
+                             "avaliação": "",
+                             "curtidas_1_estrela": "",
+                             "curtidas_2_estrela": "",
+                             "curtidas_3_estrela": "",
+                             "curtidas_4_estrela": "",
+                             "curtidas_5_estrela": "",
+                             "score": ""};
+     id: string = "";
+     critica : string = "";
+    idcinefilo: string = "";
+    Data: string = "";
+    Avaliacao: string = "";
+    cinefi: Cinefilo = {"id": 0,
+                        "user": "",
+                        "email": "",
+                        "nome": "",
+                        "telefone": "",
+                        "idade":"",
+                        "foto":""};
 
   ngOnInit(): void {
     this.idmovie = this.route.snapshot.paramMap.get("id")!;
@@ -148,62 +192,112 @@ export class MoviePageComponent implements OnInit {
     
 
     getcomentarios(){
-	this.comentario = Object.values(this.comentarioservice.getComentariosByIdMovie(this.idmovie));
+	this.comentarioservice.getComentariosByIdMovie(this.idmovie).subscribe((result)=> {
+        this.comentario = Object.values(result);
+        console.log(this.comentario);
 	this.showcomentarios();
+        }, () => {
+        //console.log(result);
+         });  
     }
 
-showcomentarios(){
-	 this.thecomentarioString = "";
-            let cont = 0;
-        this.comentario.forEach( (a) => {
-          
+    showcomentarios(){
+	this.thecomentarioString = "";
+    let cont = 0;
+    this.comentario.forEach( (a) => {
+
+		//Pega Tempo desde comentario
+		this.comentarioservice.getTempoDecorrido(a.data).subscribe((resposta: string)=> {
+		this.tempo = resposta;
+		//console.log(this.tempo);
+            });
+
+                //Pega cinefilo pelo id do usuario	
+                    this.cinefiloservice.findById(parseFloat(a.idcinefilo)).subscribe((resposta: Cinefilo) => {
+                         this.cinefi = resposta;
+                        // console.log(this.cinefi.nome);
+                   
                 this.thecomentarioString = this.thecomentarioString.concat
-                ("<div class=\"comment-main-level\" style=\"width: 85%; float: left;\">\n" +
+                ("<li ><div class=\"comment-main-level\" >\n" +
 "					<!-- Avatar -->\n" +
 "					<div class=\"comment-avatar\"><img src=\"https://image.tmdb.org/t/p/w300_and_h450_bestv2//cc0kXVI82iosBRA7HoG7lVuUeRh.jpg\" alt=\"\"></div>\n" +
 "					<!-- Contenedor del Comentario -->\n" +
-"                                        <div class=\"comment-box\" style=\"width: 67%;float: left;\"> \n" +
+"                                        <div class=\"comment-box\" > \n" +
 "						<div class=\"comment-head\">\n" +
-"							<h6 style=\"margin-top: 3px; \" class=\"comment-name by-author\"><a href=\"\">dd</a>\n" +
-"                                                        <a   style=\"text-decoration: none;\n" +
-"                                                                            content: '7.5';\n" +
-"                                                                            background: #FF3A3A;\n" +
-"                                                                            color: #FFF;\n" +
-"                                                                            font-size: 12px;\n" +
-"                                                                            padding: 3px 5px;\n" +
-"                                                                            font-weight: 700;\n" +
-"                                                                            border-radius: 3px;\n" +
-"                                                                            margin-left: 10px;\">dd/10</a></h6>\n" +
-"                                                        <span style=\"margin-top: 3px; top:0px;\">hh</span>\n" +
+"							<h6 style=\"margin-top: 3px; \" class=\"comment-name by-author\">"+
+"                                                            <a >"+this.cinefi.nome+"</a>\n" +
+"                                                        <a   class='ava' >"+parseFloat(a.critica)*2+"/10</a></h6>\n" +
+"                                                        <span style=\"margin-top: 3px; top:0px;\">"+this.tempo+"</span>\n" +
 "							<i class=\"fa fa-star\"></i>\n" +
 "                                                        <i class=\"fa fa-star\"></i>\n" +
 "                                                        <i class=\"fa fa-star\"></i>\n" +
 "                                                        <i class=\"fa fa-star\"></i>\n" +
 "                                                        <i class=\"fa fa-star\"></i>\n" +
-"                                                        <a   style=\"text-decoration: none;\n" +
-"                                                                            content: '7.5';\n" +
-"                                                                                float: right;\n" +
-"                                                                            background: #298eea;\n" +
-"                                                                            color: #FFF;\n" +
-"                                                                            font-size: 12px;\n" +
-"                                                                            padding: 3px 5px;\n" +
-"                                                                            font-weight: 700;\n" +
-"                                                                            border-radius: 3px;\n" +
-"                                                                            margin-left: 10px;\">ut/10</a>\n" +
+"                                                        <a  class='usava' >10/10</a>\n" +
 "						</div>\n" +
-"						<div style=\"padding-top: 0px;\" class=\"comment-content\">juyt</div>\n" +
+"						<div style=\"padding-top: 0px;\" class=\"comment-content\">"+a.avaliação+"</div>\n" +
 "					</div>\n" +
-"				</div>");
-            
+"				</div></li>");
+             });
         });
         
     }
 
 	enviar_coment(){
 
-	//Peva valores do form e envia
-	this.comentarioservice.create(this.coment);
-	this.getcomentarios();
+            //Pega data formatada
+		this.comentarioservice.getHoraServidor().subscribe((resposta: string) => {
+			this.hora = resposta;
+			console.log(resposta);
+		 }); 
+            
+            //Pega id inefilo
+                //Verifica se está logado
+                if(this.authenticationService.isUserLoggedIn()){
+                    //Pega email do usuario logado
+                    this.email = this.authenticationService.getLoggedInUserName();
+                        //Pega usuario pelo email
+                        this.userservice.getByEmail(this.email).subscribe((resposta: User) => {
+                           // this.usuario = resposta;
+                            console.log(this.usuario.id);
+                            this.idcinefilo = this.usuario.id.toString();
+                            //console.log(resposta);
+
+                                //Pega cinefilo pelo id do usuario	
+                                //this.cinefiloservice.findById(this.usuario.id).subscribe((resposta) => {
+                                  //      console.log(resposta);
+                                    //    this.cinefilo = Object.values(resposta);
+                                      //  console.log(this.cinefilo);
+                                //});
+                   
+
+            //Peva valores do form e envia
+            
+            this.coment = {"id": 0,
+                            "critica": this.critica,
+                            "idmovie": this.idmovie,
+                            "idcinefilo": resposta.id + '',
+                            "data": this.hora,
+                             "avaliação": this.Avaliacao,
+                             "curtidas_1_estrela": "",
+                             "curtidas_2_estrela": "",
+                             "curtidas_3_estrela": "",
+                             "curtidas_4_estrela": "",
+                             "curtidas_5_estrela": "",
+                             "score": ""};
+                           
+                console.log(this.coment);
+            this.comentarioservice.create(this.coment, this.idmovie).subscribe((result)=> {
+                this.comentarioservice.mensagem("Comentario criado com sucesso!");
+                this.getcomentarios();
+                this.Avaliacao = "";
+                this.critica = "";
+            }, () => {
+                this.comentarioservice.mensagem("Erro ao criar comentario!");
+             }); 
+               }); 
+
+                }
 	}
 
 
