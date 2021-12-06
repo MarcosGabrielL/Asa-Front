@@ -47,7 +47,7 @@ import { MoviePageComponent } from './components/views/movie/movie-page/movie-pa
 import { LoginComponent } from './components/security/login/login.component';
 import { RegisterComponent } from './components/security/register/register.component';
 import { ForgotComponent } from './components/security/forgot/forgot.component';
-import { HttpInterceptorService } from './components/security/httpInterceptor.service';
+import { HttpInterceptorService } from './components/security/httpinterceptor.service';
 import { PagenotfoundComponent } from './components/template/pagenotfound/pagenotfound.component';
 
 @NgModule({

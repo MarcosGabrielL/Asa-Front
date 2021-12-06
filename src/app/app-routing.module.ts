@@ -14,7 +14,7 @@ import { NoticiasHomeComponent } from './components/views/noticias/noticias-home
 import { ListasHomeComponent } from './components/views/listas/listas-home/listas-home.component';
 import { ArtistasHomeComponent } from './components/views/artistas/artistas-home/artistas-home.component';
 import { PagenotfoundComponent } from './components/template/pagenotfound/pagenotfound.component';
-
+import { HttpInterceptorService } from './components/security/httpinterceptor.service';
 import { LoginComponent } from './components/security/login/login.component';
 import { RegisterComponent } from './components/security/register/register.component';
 
