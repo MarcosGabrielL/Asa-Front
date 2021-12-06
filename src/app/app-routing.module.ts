@@ -9,9 +9,11 @@ import { MovieBuscaComponent } from './components/views/movie/movie-busca/movie-
 import { HomeGeralFilmesComponent } from './components/views/home/home-geral-filmes/home-geral-filmes.component';
 import { HomeAcaoFilmesComponent } from './components/views/home/home-acao-filmes/home-acao-filmes.component';
 import { CinefiloHomeComponent } from './components/views/cinefilo/cinefilo-home/cinefilo-home.component';
+import { CinefiloUpdateComponent } from './components/views/cinefilo/cinefilo-update/cinefilo-update.component';
 import { NoticiasHomeComponent } from './components/views/noticias/noticias-home/noticias-home.component';
 import { ListasHomeComponent } from './components/views/listas/listas-home/listas-home.component';
 import { ArtistasHomeComponent } from './components/views/artistas/artistas-home/artistas-home.component';
+import { PagenotfoundComponent } from './components/template/pagenotfound/pagenotfound.component';
 
 import { LoginComponent } from './components/security/login/login.component';
 import { RegisterComponent } from './components/security/register/register.component';
@@ -34,6 +36,11 @@ const routes: Routes = [
    {
     path: 'home-cinefilo',
     component: CinefiloHomeComponent,
+    canActivate: [ HttpInterceptorService ]
+   },
+   {
+    path: 'home-cinefilo/config',
+    component: CinefiloUpdateComponent,
     canActivate: [ HttpInterceptorService ]
    },
    {
@@ -63,6 +70,9 @@ const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'logout', component: LoginComponent},
+     //Wild Card Route for 404 request
+    { path: '**', pathMatch: 'full', 
+        component: PagenotfoundComponent },
 ];
 
 @NgModule({
