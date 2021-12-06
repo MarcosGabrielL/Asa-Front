@@ -17,7 +17,6 @@ import { PagenotfoundComponent } from './components/template/pagenotfound/pageno
 
 import { LoginComponent } from './components/security/login/login.component';
 import { RegisterComponent } from './components/security/register/register.component';
-import { HttpInterceptorService } from './components/security/httpInterceptor.service';
 
 const routes: Routes = [
    { path: '', redirectTo: '/home', pathMatch: 'full' },
