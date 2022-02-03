@@ -57,7 +57,7 @@ export class MovieBuscaComponent implements OnInit {
                 ("<li>"+
             "<div class='movie'>"+
                "<figure class='movie__figure'>"+
-                    "<a href=\"http://localhost:4200/filme/"+a.id+"\">"+
+                    "<a routerLink='login/filme/"+a.id+"\'">"+
                         "<img src='https://image.tmdb.org/t/p/w300"+a.poster_path+"' class='movie__poster'>"+
                     "</a>" +
                " <figcaption><span class='movie__vote'>"+a.vote_average+"</span></figcaption>"+
