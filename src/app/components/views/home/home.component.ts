@@ -14,24 +14,10 @@ export class HomeComponent implements OnInit {
    
    genero: string = "";
   
-  m1 = true;
-  m2 = false;
-  m3 = false;
-  m4 = false;
   
   ngOnInit(): void {
                 this.genero =  this.service.data;
-    
-    if(this.genero === ""){
-      this.m1 = true;
-    } if(this.genero === "28"){
-         this.m2 = true;
-    } if(this.genero === "12"){
-         this.m3 = true;
-    } if(this.genero === "16"){
-         this.m4 = true;
-    }
-    
+   
     
     console.log(this.genero);
     //console.log("O");
