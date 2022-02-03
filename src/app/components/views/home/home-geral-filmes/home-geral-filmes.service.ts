@@ -25,8 +25,12 @@ export class HomeGeralFilmesService {
     GENRE_ID: string = "";
     API_URL_MOVIEGENRE = `https://api.themoviedb.org/3/genre/${this.GENRE_ID}/movies?api_key=${this.API_KEY}&language=pt-BR`
    // API_URL_MOVIEGENRE = `https://api.themoviedb.org/3/discover/movie?api_key=${this.API_KEY}&with_genres=${this.GENRE_ID}`
+  
+   myMethod$: Observable<any>;
+    private myMethodSubject = new Subject<any>();
     
-constructor(private http: HttpClient) { }
+constructor(private http: HttpClient) {
+      this.myMethod$ = this.myMethodSubject.asObservable(); }
 
     Get20Popular(): Observable<Root[]>{
         return this.http.get<Root[]>(this.API_URL.concat(this.page))
@@ -56,4 +60,18 @@ constructor(private http: HttpClient) { }
         return this.http.get<Root[]>(URL)
  
     }
+  
+
+   
+
+        
+    
+
+    myMethod(data) {
+      
+        console.log(data); // I have data! Let's return it so subscribers can use it!
+        // we can do stuff with data if we want
+        this.myMethodSubject.next(data);
+    }
+}
 }
