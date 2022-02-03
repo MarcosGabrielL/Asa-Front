@@ -24,10 +24,12 @@ export class HomeAcaoFilmesComponent implements OnInit {
     
   constructor(private route: ActivatedRoute, private service: HomeGeralFilmesService, private router: Router) { }
 
+      
    
 
   ngOnInit(): void {
     this.genero =this.route.snapshot.paramMap.get("genero")!;
+      this.service.myMethod( this.genero);
     this.GetMoviesGenre();
      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
