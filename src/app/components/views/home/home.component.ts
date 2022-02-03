@@ -15,10 +15,8 @@ m1 = true;
    genero: string = "";
   
   ngOnInit(): void {
-     this.service.myMethod$.subscribe((data: any) => {
-                this.genero = data;
-            }
-        );
+                this.genero =  this.filterPanelService.data;
+         
     console.log(this.genero);
     console.log("O");
   }
