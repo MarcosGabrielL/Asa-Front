@@ -19,7 +19,7 @@ export class HomeAcaoFilmesComponent implements OnInit {
      result: Result[] = [];
      root: Root[] = [];
   
-      myli = true;
+      m1 = true;
     
   constructor(private route: ActivatedRoute, private service: HomeGeralFilmesService, private router: Router) { }
 
