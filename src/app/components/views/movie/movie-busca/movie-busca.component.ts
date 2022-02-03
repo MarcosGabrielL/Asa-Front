@@ -57,11 +57,9 @@ export class MovieBuscaComponent implements OnInit {
                 ("<li routerLink='filme/"+a.id+"\'>"+
             "<div routerLink='filme/"+a.id+"\' class='movie'>"+
                "<figure routerLink='filme/"+a.id+"\' class='movie__figure'>"+
-                    "<a routerLink='filme/"+a.id+"\'>"+
-                 " <span routerLink='login'>"+
+                    "<a href='/filme/"+a.id+"\'>"+
                         "<img routerLink='filme/"+a.id+"\' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"' class='movie__poster'>"+
-                  "</span>"+
-                    "</a>" +
+                  "</a>" +
                " <figcaption><span class='movie__vote'>"+a.vote_average+"</span></figcaption>"+
                   "<h2 class='movie__title'>"+a.title+"</h2>"+
               " </figure>"+
