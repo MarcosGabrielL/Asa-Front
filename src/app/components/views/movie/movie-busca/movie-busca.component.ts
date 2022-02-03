@@ -3,7 +3,7 @@ import { MovieBuscaService } from './movie-busca.service';
 import { map } from 'rxjs/operators';
 import { Result} from './result.model';
 import { Root } from './root.model';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-movie-busca',
@@ -57,7 +57,7 @@ export class MovieBuscaComponent implements OnInit {
                 ("<li routerLink='login/filme/"+a.id+"\'>"+
             "<div routerLink='login/filme/"+a.id+"\' class='movie'>"+
                "<figure routerLink='login/filme/"+a.id+"\' class='movie__figure'>"+
-                    "<a routerLink='login/filme/"+a.id+"\'>"+
+                    "<a [routerLink]='login/filme/"+a.id+"\'>"+
                         "<img routerLink='login/filme/"+a.id+"\' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"' class='movie__poster'>"+
                     "</a>" +
                " <figcaption><span class='movie__vote'>"+a.vote_average+"</span></figcaption>"+
