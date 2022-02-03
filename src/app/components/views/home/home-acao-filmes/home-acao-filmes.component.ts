@@ -1,6 +1,6 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { HomeGeralFilmesService } from '../home-geral-filmes/home-geral-filmes.service';
 import { map } from 'rxjs/operators';
 import { Result} from '../home-geral-filmes/result.model';
@@ -14,6 +14,7 @@ import { Root } from '../home-geral-filmes/root.model';
 })
 export class HomeAcaoFilmesComponent implements OnInit {
 
+      @Input()
      genero: string = "";
      theTradingString: string = "";
      result: Result[] = [];
