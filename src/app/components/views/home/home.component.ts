@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
  m1 = true;
   
   ngOnInit(): void {
-    console.log(this.route.snapshot.paramMap.get("genero"));
+    console.log(this.router.snapshot.paramMap.get("genero"));
     console.log("O");
   }
 
