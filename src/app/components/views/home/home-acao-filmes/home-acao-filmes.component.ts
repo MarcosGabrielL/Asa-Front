@@ -28,6 +28,8 @@ export class HomeAcaoFilmesComponent implements OnInit {
           this.route.params.subscribe((params = {}) => {
 
               console.log(params.genero);
+             this.genero = params.genero;
+            this.GetMoviesGenre();
           });
       }
 
