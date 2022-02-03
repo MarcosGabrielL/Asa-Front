@@ -144,7 +144,10 @@ export class HomeGeralFilmesComponent implements OnInit {
                     case 0:
                         this.thePrincipalString = this.thePrincipalString.concat
                     (
-                    "<div class='slide-image slider-link prev' ><img href='/filme/"+a.id+"' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
+                    "<div class='slide-image slider-link prev' >"+
+                           "<a href='/filme/"+a.id+"\'>"+
+                          "<img href='/filme/"+a.id+"' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
+                          "</a>" +
                         "<div class='slide-content'>"+
                                 "<div class='slide-date'>"+a.title+"</div>"+
                                 "<div class='slide-title'>"+a.release_date.substring(0, 4)+"</div>"+
@@ -156,8 +159,11 @@ export class HomeGeralFilmesComponent implements OnInit {
                     case 1:
                        this.thePrincipalString1 = this.thePrincipalString1.concat
                     (
-                    "<div class='slide-image slider-link prev' ><img href='/filme/"+a.id+"\' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
-                        "<div class='slide-content'>"+
+                    "<div class='slide-image slider-link prev' >+
+                           "<a href='/filme/"+a.id+"\'>"+
+                          "<img href='/filme/"+a.id+"' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
+                          "</a>" +
+                         "<div class='slide-content'>"+
                                 "<div class='slide-date'>"+a.title+"</div>"+
                                 "<div class='slide-title'>"+a.release_date.substring(0, 4)+"</div>"+
                                 "<div class='slide-text'>"+a.overview+"</div>"+
@@ -168,7 +174,10 @@ export class HomeGeralFilmesComponent implements OnInit {
                     case 2:
                        this.thePrincipalString2 = this.thePrincipalString2.concat
                     (
-                    "<div class='slide-image slider-link prev' ><img href='/filme/"+a.id+"\' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
+                    "<div class='slide-image slider-link prev' >+
+                           "<a href='/filme/"+a.id+"\'>"+
+                          "<img href='/filme/"+a.id+"' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
+                          "</a>" +
                         "<div class='slide-content'>"+
                                 "<div class='slide-date'>"+a.title+"</div>"+
                                 "<div class='slide-title'>"+a.release_date.substring(0, 4)+"</div>"+
@@ -180,7 +189,10 @@ export class HomeGeralFilmesComponent implements OnInit {
                     case 3:
                        this.thePrincipalString3 = this.thePrincipalString3.concat
                     (
-                    "<div class='slide-image slider-link prev' ><img href='/filme/"+a.id+"\' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
+                    "<div class='slide-image slider-link prev' >+
+                           "<a href='/filme/"+a.id+"\'>"+
+                          "<img href='/filme/"+a.id+"' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
+                          "</a>" +
                         "<div class='slide-content'>"+
                                 "<div class='slide-date'>"+a.title+"</div>"+
                                 "<div class='slide-title'>"+a.release_date.substring(0, 4)+"</div>"+
@@ -192,7 +204,10 @@ export class HomeGeralFilmesComponent implements OnInit {
                     case 4:
                        this.thePrincipalString4 = this.thePrincipalString4.concat
                     (
-                    "<div class='slide-image slider-link prev' ><img href='/filme/"+a.id+"\' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
+                    "<div class='slide-image slider-link prev' >+
+                           "<a href='/filme/"+a.id+"\'>"+
+                          "<img href='/filme/"+a.id+"' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
+                          "</a>" +
                         "<div class='slide-content'>"+
                                 "<div class='slide-date'>"+a.title+"</div>"+
                                 "<div class='slide-title'>"+a.release_date.substring(0, 4)+"</div>"+
