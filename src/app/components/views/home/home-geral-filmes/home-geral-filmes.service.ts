@@ -4,7 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Root } from './root.model';
-import {Subject} from 'rxjs/Subject';
+import {Subject} from 'rxjs-compat/Subject';
 
 @Injectable({
   providedIn: 'root'
