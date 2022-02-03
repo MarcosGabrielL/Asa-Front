@@ -31,7 +31,7 @@ export class HomeAcaoFilmesComponent implements OnInit {
     this.genero =this.route.snapshot.paramMap.get("genero")!;
        this.service.data = this.genero;
     this.GetMoviesGenre();
-     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    //reload this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
     //GEt Movies by genre
     GetMoviesGenre(){
