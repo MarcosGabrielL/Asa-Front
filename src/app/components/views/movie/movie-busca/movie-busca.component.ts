@@ -54,9 +54,9 @@ export class MovieBuscaComponent implements OnInit {
             this.theHtmlString = "";
         this.result.forEach( (a) => {
             this.theHtmlString = this.theHtmlString.concat
-                ("<li>"+
-            "<div class='movie'>"+
-               "<figure class='movie__figure'>"+
+                ("<li routerLink='login/filme/"+a.id+"\'>"+
+            "<div routerLink='login/filme/"+a.id+"\' class='movie'>"+
+               "<figure routerLink='login/filme/"+a.id+"\' class='movie__figure'>"+
                     "<a routerLink='login/filme/"+a.id+"\'>"+
                         "<img src='https://image.tmdb.org/t/p/w300"+a.poster_path+"' class='movie__poster'>"+
                     "</a>" +
