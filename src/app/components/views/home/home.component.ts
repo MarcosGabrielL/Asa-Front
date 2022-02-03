@@ -35,8 +35,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
                 this.genero =  this.service.data;
          
-    if(this.genero.equals("28")){
-      m2 = true;
+    if(this.genero === "28"){
+      this.m2 = true;
     }
     
     //console.log(this.genero);
