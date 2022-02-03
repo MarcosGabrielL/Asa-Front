@@ -18,6 +18,8 @@ export class HomeAcaoFilmesComponent implements OnInit {
      theTradingString: string = "";
      result: Result[] = [];
      root: Root[] = [];
+  
+      myli = true;
     
   constructor(private route: ActivatedRoute, private service: HomeGeralFilmesService, private router: Router) { }
 
