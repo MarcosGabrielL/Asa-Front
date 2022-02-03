@@ -32,10 +32,10 @@
                     <menu class="menu">
 				<p class="menu-name"><b>Categorias</b></p>
 				<ul >
-					<li #myli   [class.active]="m1" [class.fff]="!m1">
+					<li #myli   [ngClass]="{'active' : m1}">
                                           <a routerLink="" >Todas</a>
                       </li>
-					<li #my2li [class.active]="m2" [class.fff]="!m2"> <a routerLink="filmes/28">Ação</a></li>
+					<li #my2li  [ngClass]="{'active' : m2}" <a routerLink="filmes/28">Ação</a></li>
           
 					<li #my3li                        (click)="my3li.classList.add('active');
                                                      myli.classList.remove('active');
