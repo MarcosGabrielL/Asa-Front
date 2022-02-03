@@ -22,10 +22,15 @@ export class HomeAcaoFilmesComponent implements OnInit {
   
       m1 = true;
     
-  constructor(private route: ActivatedRoute, private service: HomeGeralFilmesService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private service: HomeGeralFilmesService, private router: Router) { this.subscribeRouteChange(); }
 
-      
-   
+      subscribeRouteChange() {
+          this.route.params.subscribe((params = {}) => {
+
+              console.log(params.genero);
+          });
+      }
+
 
   ngOnInit(): void {
     this.genero =this.route.snapshot.paramMap.get("genero")!;
