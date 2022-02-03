@@ -144,12 +144,12 @@ export class HomeGeralFilmesComponent implements OnInit {
                     case 0:
                         this.thePrincipalString = this.thePrincipalString.concat
                     (
-                    "<div class='slide-image slider-link prev' ><img href='/filme/"+a.id+"\' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
+                    "<div class='slide-image slider-link prev' ><img href='/filme/"+a.id+"' src='https://image.tmdb.org/t/p/w300"+a.poster_path+"'><div class='overlay'></div></div>"+
                         "<div class='slide-content'>"+
                                 "<div class='slide-date'>"+a.title+"</div>"+
                                 "<div class='slide-title'>"+a.release_date.substring(0, 4)+"</div>"+
                                 "<div class='slide-text'>"+a.overview+"</div>"+
-                                "<a  href='/filme/"+a.id+"\'>"<div class='slide-more'>READ MORE</div></a>"+
+                                "<a  href='/filme/"+a.id+"\'><div class='slide-more'>READ MORE</div></a>"+
                         "</div>	"+
                     "</div>");
                         break;
@@ -161,7 +161,7 @@ export class HomeGeralFilmesComponent implements OnInit {
                                 "<div class='slide-date'>"+a.title+"</div>"+
                                 "<div class='slide-title'>"+a.release_date.substring(0, 4)+"</div>"+
                                 "<div class='slide-text'>"+a.overview+"</div>"+
-                                "<a href='/filme/"+a.id+"\'><div class='slide-more'>READ MORE</div></a>"+
+                                "<a  href='/filme/"+a.id+"\'><div class='slide-more'>READ MORE</div></a>"+
                         "</div>	"+
                     "</div>");
                         break;
@@ -173,7 +173,7 @@ export class HomeGeralFilmesComponent implements OnInit {
                                 "<div class='slide-date'>"+a.title+"</div>"+
                                 "<div class='slide-title'>"+a.release_date.substring(0, 4)+"</div>"+
                                 "<div class='slide-text'>"+a.overview+"</div>"+
-                                "<a href='/filme/"+a.id+"\'><div class='slide-more'>READ MORE</div></a>"+
+                               "<a  href='/filme/"+a.id+"\'><div class='slide-more'>READ MORE</div></a>"+
                         "</div>	"+
                     "</div>");
                         break;
@@ -185,7 +185,7 @@ export class HomeGeralFilmesComponent implements OnInit {
                                 "<div class='slide-date'>"+a.title+"</div>"+
                                 "<div class='slide-title'>"+a.release_date.substring(0, 4)+"</div>"+
                                 "<div class='slide-text'>"+a.overview+"</div>"+
-                                "<a href='/filme/"+a.id+"\'><div class='slide-more'>READ MORE</div></a>"+
+                                "<a  href='/filme/"+a.id+"\'><div class='slide-more'>READ MORE</div></a>"+
                         "</div>	"+
                     "</div>");
                         break;
@@ -197,7 +197,7 @@ export class HomeGeralFilmesComponent implements OnInit {
                                 "<div class='slide-date'>"+a.title+"</div>"+
                                 "<div class='slide-title'>"+a.release_date.substring(0, 4)+"</div>"+
                                 "<div class='slide-text'>"+a.overview+"</div>"+
-                                "<a href='/filme/"+a.id+"\'><div class='slide-more'>READ MORE</div></a>"+
+                              "<a  href='/filme/"+a.id+"\'><div class='slide-more'>READ MORE</div></a>"+
                         "</div>	"+
                     "</div>");
                         break;
