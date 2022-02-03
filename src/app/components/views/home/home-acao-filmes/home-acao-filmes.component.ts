@@ -29,7 +29,7 @@ export class HomeAcaoFilmesComponent implements OnInit {
 
   ngOnInit(): void {
     this.genero =this.route.snapshot.paramMap.get("genero")!;
-      this.service.myMethod( this.genero);
+       this.service.data = this.activeFilters;
     this.GetMoviesGenre();
      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
