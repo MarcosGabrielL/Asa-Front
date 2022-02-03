@@ -34,7 +34,10 @@ export class HomeComponent implements OnInit {
   
   ngOnInit(): void {
                 this.genero =  this.service.data;
-         
+    
+     if(this.genero === null){
+      this.m1 = true;
+    }    
     if(this.genero === "28"){
       this.m2 = true;
     }
