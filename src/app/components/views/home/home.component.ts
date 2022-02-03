@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
-
+import { HomeGeralFilmesService } from '/home-geral-filmes/home-geral-filmes.service';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +9,17 @@ import { Router, ActivatedRoute } from "@angular/router";
 })
 export class HomeComponent implements OnInit {
 
-  constructor( private router: Router, private route: ActivatedRoute) { }
+  constructor( private router: Router, private route: ActivatedRoute, private service: HomeGeralFilmesService) { }
 
-
+m1 = true;
+   genero: string = "";
   
   ngOnInit(): void {
-    console.log(this.route.snapshot.paramMap.get("genero")!);
+     this.service.myMethod$.subscribe((data) => {
+                this.genero = data;
+            }
+        );
+    console.log(this.genero);
     console.log("O");
   }
 
