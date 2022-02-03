@@ -2,6 +2,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
 <style>
+  
+  @media (min-width: 576px) {
+    
+      .menu-top {
+        display: none;  
+      }
+    .sidebar { display: none;}
+    .bb input{ width: 90%;}
+    .top-bar { width: 90%;}
+  }
     
     @media screen and (max-width: 1220px) {
   .window > .sidebar {
@@ -491,7 +501,7 @@ a:hover {
      
 
 			<div class="top-bar">
-                            <form><input (keyup.enter)="onKeyUp1()" [(ngModel)]="nome1" name="nome1" id="nome1" type="text" placeholder="Buscar Filme ..." style="
+                            <form class="bb"><input (keyup.enter)="onKeyUp1()" [(ngModel)]="nome1" name="nome1" id="nome1" type="text" placeholder="Buscar Filme ..." style="
 	        background: #e8e8e8;
     border-radius: 10px;
     display: block;
