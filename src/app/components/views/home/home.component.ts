@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
-import { HomeGeralFilmesService } from "home-geral-filmes/home-geral-filmes.service";
+import { HomeGeralFilmesService } from '../home-geral-filmes/home-geral-filmes.service';
 
 @Component({
   selector: 'app-home',
