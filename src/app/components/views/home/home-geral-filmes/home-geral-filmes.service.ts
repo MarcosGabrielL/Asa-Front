@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Root } from './root.model';
+import {Subject} from 'rxjs/Subject';
 
 @Injectable({
   providedIn: 'root'
@@ -67,11 +68,11 @@ constructor(private http: HttpClient) {
         
     
 
-    myMethod(data) {
+    myMethod(data: any) {
       
         console.log(data); // I have data! Let's return it so subscribers can use it!
         // we can do stuff with data if we want
         this.myMethodSubject.next(data);
     }
-}
+
 }
