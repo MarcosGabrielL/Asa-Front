@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
-import { HomeGeralFilmesService } from 'home-geral-filmes/home-geral-filmes.service';
+import { HomeGeralFilmesService } from "/home-geral-filmes/home-geral-filmes.service";
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,7 @@ m1 = true;
    genero: string = "";
   
   ngOnInit(): void {
-     this.service.myMethod$.subscribe((data) => {
+     this.service.myMethod$.subscribe((data: any) => {
                 this.genero = data;
             }
         );
