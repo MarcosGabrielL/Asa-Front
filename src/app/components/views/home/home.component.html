@@ -32,27 +32,9 @@
                     <menu class="menu">
 				<p class="menu-name"><b>Categorias</b></p>
 				<ul >
-					<li #myli class="active"
-                                            (click)="myli.classList.add('active');
-                                                     my2li.classList.remove('active');
-                                                     my3li.classList.remove('active');
-                                                     my4li.classList.remove('active');
-                                                     my5li.classList.remove('active');
-                                                     my6li.classList.remove('active');
-                                                     my7li.classList.remove('active');
-                                                     my8li.classList.remove('active');
-                                                     my9li.classList.remove('active');
-                                                     my10li.classList.remove('active');
-                                                     my11li.classList.remove('active');
-                                                     my12li.classList.remove('active');
-                                                     my13li.classList.remove('active');
-                                                     my14li.classList.remove('active');
-                                                     my15li.classList.remove('active');
-                                                     my16li.classList.remove('active');
-                                                     my17li.classList.remove('active');
-                                                     my18li.classList.remove('active');
-                                                     my19li.classList.remove('active')"
-                                            ><a routerLink="" >Todas</a></li>
+					<li    [class.active]="myli" [class.fff]="!myli"
+                                          <a routerLink="" >Todas</a>
+                      </li>
 					<li #my2li
                                             (click)="my2li.classList.add('active');
                                                      myli.classList.remove('active');
