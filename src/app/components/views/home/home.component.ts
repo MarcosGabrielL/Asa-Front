@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   constructor( private router: Router, private route: ActivatedRoute) { }
 
- m1 = true;
+
   
   ngOnInit(): void {
     console.log(this.route.snapshot.paramMap.get("genero")!);
