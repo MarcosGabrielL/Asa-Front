@@ -32,86 +32,12 @@
                     <menu class="menu">
 				<p class="menu-name"><b>Categorias</b></p>
 				<ul >
-        <li #myli class="active" (click)="my3li.classList.remove('active');
-                                                     my2li.classList.remove('active');
-                                                     my4li.classList.remove('active');
-                                                     my5li.classList.remove('active');
-                                                     my6li.classList.remove('active');
-                                                     my7li.classList.remove('active');
-                                                     my8li.classList.remove('active');
-                                                     my9li.classList.remove('active');
-                                                     my10li.classList.remove('active');
-                                                     my11li.classList.remove('active');
-                                                     my12li.classList.remove('active');
-                                                     my13li.classList.remove('active');
-                                                     my14li.classList.remove('active');
-                                                     my15li.classList.remove('active');
-                                                     my16li.classList.remove('active');
-                                                     my17li.classList.remove('active');
-                                                     my18li.classList.remove('active');
-                                                     my19li.classList.remove('active');
-                                                     myli.classList.add('active')
-                                                     ">
-                                          <a routerLink="" >Todas</a>
+        <li #myli class="active" ng-class="{'active' : m1}"> <a routerLink="" >Todas</a>
                       </li>
-					<li #my2li  (click)="myli.classList.remove('active');
-                                                     my3li.classList.remove('active');
-                                                     my4li.classList.remove('active');
-                                                     my5li.classList.remove('active');
-                                                     my6li.classList.remove('active');
-                                                     my7li.classList.remove('active');
-                                                     my8li.classList.remove('active');
-                                                     my9li.classList.remove('active');
-                                                     my10li.classList.remove('active');
-                                                     my11li.classList.remove('active');
-                                                     my12li.classList.remove('active');
-                                                     my13li.classList.remove('active');
-                                                     my14li.classList.remove('active');
-                                                     my15li.classList.remove('active');
-                                                     my16li.classList.remove('active');
-                                                     my17li.classList.remove('active');
-                                                     my18li.classList.remove('active');
-                                                     my19li.classList.remove('active');
-                                                    my2li.classList.add('active')"> <a routerLink="filmes/28">Ação</a></li>
+					<li #my2li  ng-class="{'active' : m2}"> <a routerLink="filmes/28">Ação</a></li>
           
-					<li #my3li                        (click)="my3li.classList.add('active');
-                                                     myli.classList.remove('active');
-                                                     my2li.classList.remove('active');
-                                                     my4li.classList.remove('active');
-                                                     my5li.classList.remove('active');
-                                                     my6li.classList.remove('active');
-                                                     my7li.classList.remove('active');
-                                                     my8li.classList.remove('active');
-                                                     my9li.classList.remove('active');
-                                                     my10li.classList.remove('active');
-                                                     my11li.classList.remove('active');
-                                                     my12li.classList.remove('active');
-                                                     my13li.classList.remove('active');
-                                                     my14li.classList.remove('active');
-                                                     my15li.classList.remove('active');
-                                                     my16li.classList.remove('active');
-                                                     my17li.classList.remove('active');
-                                                     my18li.classList.remove('active');
-                                                     my19li.classList.remove('active')"><a routerLink="filmes/12">Aventura</a></li>
-					<li #my4li                         (click)="my4li.classList.add('active');
-                                                     myli.classList.remove('active');
-                                                     my2li.classList.remove('active');
-                                                     my3li.classList.remove('active');
-                                                     my5li.classList.remove('active');
-                                                     my6li.classList.remove('active');
-                                                     my7li.classList.remove('active');
-                                                     my8li.classList.remove('active');
-                                                     my9li.classList.remove('active');
-                                                     my10li.classList.remove('active');
-                                                     my11li.classList.remove('active');
-                                                     my12li.classList.remove('active');
-                                                     my13li.classList.remove('active');
-                                                     my14li.classList.remove('active');
-                                                     my15li.classList.remove('active');
-                                                     my16li.classList.remove('active');
-                                                     my17li.classList.remove('active');
-                                                     my18li.classList.remove('active');
-                                                     my19li.classList.remove('active')"><a routerLink="filmes/16">Animaçao</a></li>
+					<li #my3li  ng-class="{'active' : m3}"><a routerLink="filmes/12">Aventura</a></li>
+					<li #my4li    ng-class="{'active' : m4}"><a routerLink="filmes/16">Animaçao</a></li>
 					<li #my5li                          (click)="my5li.classList.add('active');
                                                      myli.classList.remove('active');
                                                      my2li.classList.remove('active');
