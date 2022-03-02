@@ -2,26 +2,44 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
 
-## Development server
+## ASA - Movie DB
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ASA é um  modelo de aplicativo web de filmes.
 
-## Code scaffolding
+<img src="https://image.prntscr.com/image/ajXgmN4qS72U0hmfclQdCA.png" width="600"></img>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Este  aplicativo foi projetado como um conceito que facili o desenvolvimento de componentes ricos e reutilizaveis para aplicativo sweb baseados no imdb com o principio de desenvolvimento rápido
 
-## Build
+## Recursos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Busca de qualquer filme ja produzido
+- Tela de integração
+- Busca por categoria
+- Médiarelativa e flutuante
+- Favoritos
+- EPerfil
+- Comentario
+- Trailers
+- Listas
+- Avaliação
+- Avaliação de outras avaliações
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Beck-End
 
-## Running end-to-end tests
+https://github.com/MarcosGabrielL/Asa
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## License
 
-## Further help
+Apache 2.0
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Demo
+
+https://asa-moviedb-front.herokuapp.com/home
+
+<br>
+
+## Credits
+
+- Created by Marcos Gabriel
+
