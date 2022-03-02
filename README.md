@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ASA é um  modelo de aplicativo web de filmes.
 
-<img src="https://image.prntscr.com/image/ajXgmN4qS72U0hmfclQdCA.png" width="600"></img>
+<img src="https://i.ibb.co/68zX2pJ/sad.png" width="600"></img>
 
 Este  aplicativo foi projetado como um conceito que facili o desenvolvimento de componentes ricos e reutilizaveis para aplicativo sweb baseados no imdb com o principio de desenvolvimento rápido
 
