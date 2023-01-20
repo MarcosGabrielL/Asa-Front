@@ -1,0 +1,49 @@
+
+
+<div class="container container col-lg-6">
+	<div class="screen">
+		<div class="screen__content">
+                   
+			<form class="login" style="padding-top: 40px;">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input for="email" type="text" class="form-control login__input" id="email" [(ngModel)]="email"
+              name="email"  placeholder="Email">
+				</div>
+				<div class="login__field">
+					<i for="pwd" class="login__icon fas fa-lock"></i>
+					<input type="Password" class="form-control login__input" [(ngModel)]="password" id="password" placeholder="Enter password"
+              name="password">
+				</div>
+                            <div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input for="firstName" type="text" class="form-control login__input" id="firstName" [(ngModel)]="firstName"
+              name="firstName"  placeholder="Nome">
+				</div>
+                            <div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input for="lastName" type="text" class="form-control login__input" id="lastName" [(ngModel)]="lastName"
+              name="lastName"  placeholder="Sobrenome">
+				</div>
+				<button  (click)=handleLogin() class="btn btn-success button login__submit">
+					<span class="button__text">Registrar-se</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+			<div class="social-login">
+				<h3>Registrar-se via</h3>
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>

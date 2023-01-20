@@ -1,0 +1,22 @@
+
+
+<!-- LISTA DE FILMES -->
+<div class="title-bar">
+					<div class="left">
+						<p class="bold">Filmes</p>
+                                                <p class="grey"> / </p>
+						<p class="grey" [innerHTML]="genero"></p>
+					</div> <!-- left -->
+					<div class="right">
+						<a class="blue" href="#">Avaliação<i class="fa fa-angle-down" style="margin-left: 5px;"></i></a>
+						<a href="#">Mais Recentes</a>
+						<a href="#">Mais Antigos</a>
+					</div> <!-- right -->
+				</div> <!-- title-bar -->
+<div id="root">
+   <div data-reactroot="" class="app">
+      <ul class="movies" style="margin: 5%;" [innerHTML]="theTradingString">
+        
+      </ul>
+   </div>
+</div>

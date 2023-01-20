@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'asadmovie-front'`, () => {
+  it(`should have as title 'asafrontapp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('asadmovie-front');
+    expect(app.title).toEqual('asafrontapp');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('asadmovie-front app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('asafrontapp app is running!');
   });
 });
