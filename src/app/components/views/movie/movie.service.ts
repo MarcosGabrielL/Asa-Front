@@ -23,9 +23,15 @@ baseUrl: String = environment.baseUrl;
         return this.http.get<MovieDetails[]>(requestURL)
     }
     
-    GetTorrentsDublado(query: String): Observable<Torrent[]>{
+    GetDetailsEnglish(id: String): Observable<MovieDetails[]>{
+        var api_key = "249f222afb1002186f4d88b2b5418b55";
+        var requestURL = "https://api.themoviedb.org/3/movie/" + id + "?api_key=" + api_key + "&append_to_response=release_dates,credits,videos&language=en-US";
+        return this.http.get<MovieDetails[]>(requestURL)
+    }
+    
+    GetTorrentsDublado(query: String, query_en: String): Observable<Torrent[]>{
 	 
-	  var requestURL = this.baseUrl + "/movies/torrents/" + query;
+	  var requestURL = this.baseUrl + "/movies/torrents/" + query+"/"+query_en;
 	  console.log(requestURL);
         return this.http.get<Torrent[]>(requestURL)
 	}

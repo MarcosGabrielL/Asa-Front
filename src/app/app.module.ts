@@ -52,6 +52,8 @@ import { PagenotfoundComponent } from './components/template/pagenotfound/pageno
 import { TorrentsModalComponent } from './components/views/movie/movie-page/torrents-modal/torrents-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -105,6 +107,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     CarouselModule,
     NgbModule,
+    TranslateModule
   ],
   providers: [
      {

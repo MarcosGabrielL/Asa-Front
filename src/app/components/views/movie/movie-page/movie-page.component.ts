@@ -27,7 +27,6 @@ import { Cinefilo } from '../../cinefilo/cinefilo.model';
 import { CinefiloService } from '../../cinefilo/cinefilo.service';
 
 
-
 import {NgbModal, ModalDismissReasons, NgbModalConfig,NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 //import { NgxDropzoneModule } from 'ngx-dropzone';
 import { TorrentsModalComponent } from '../movie-page/torrents-modal/torrents-modal.component';
@@ -76,6 +75,7 @@ export class MoviePageComponent implements OnInit {
     idmovie: string = "";
 
     tituloString: string = "";
+    tituloString_en: string = "";
     release_dateString: string = "";
     imagePath: string = "";
     trailerPath: string = "";
@@ -129,8 +129,9 @@ export class MoviePageComponent implements OnInit {
     this.GetDetails();
     this.getcomentarios();
     
-	
   }
+  
+  
 
     GetDetails(){
         this.service.GetDetails(this.idmovie).subscribe((resposta) => {
@@ -335,13 +336,20 @@ export class MoviePageComponent implements OnInit {
 	
 	
 	getTorrents(){
-	this.service.GetTorrentsDublado(this.tituloString ).subscribe((result)=> {
-       this.Torrents = Object.values(result);
-        //console.log("This.Torrentes" +this.Torrents);
-	this.showcomentarios();
-        }, () => {
-        //console.log(result);
-         });  
+		this.service.GetDetailsEnglish(this.idmovie).subscribe((resposta) => {
+            this.moviedetails = resposta;
+            console.log(resposta);
+              
+				this.service.GetTorrentsDublado(this.tituloString,  ""+Object.values(resposta)[21] ).subscribe((result)=> {
+				       this.Torrents = Object.values(result);
+				        //console.log("This.Torrentes" +this.Torrents);
+					this.showcomentarios();
+				        }, () => {
+				        //console.log(result);
+				         }); 
+               
+            });  
+	 
     }
     
     sanitize(url:any){
