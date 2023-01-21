@@ -6,6 +6,7 @@ import { DomSanitizer} from '@angular/platform-browser';
 import { formatDate } from "@angular/common";
 import { Observable } from 'rxjs';
 
+
 import { ComentarioService } from '../comentario.service';
 import { MovieService } from '../movie.service';
 import { MovieDetails } from '../movie.model';
@@ -23,6 +24,9 @@ import { UserService } from '../../cinefilo/user.service';
 import { User } from '../../cinefilo/user.model';
 import { Cinefilo } from '../../cinefilo/cinefilo.model';
 import { CinefiloService } from '../../cinefilo/cinefilo.service';
+
+import * as TorrentSearchApi from 'torrent-search-api';
+
 @Component({
   selector: 'app-movie-page',
   templateUrl: './movie-page.component.html',
@@ -31,11 +35,15 @@ import { CinefiloService } from '../../cinefilo/cinefilo.service';
 })
 
 export class MoviePageComponent implements OnInit {
+	
+	
 
   constructor(private comentarioservice : ComentarioService , private service: MovieService,  private route: ActivatedRoute, private sanitizer: DomSanitizer,
             private authenticationService: LoginService,
             private cinefiloservice : CinefiloService,
               private userservice : UserService) { }
+              
+              
     
     moviedetails: MovieDetails[] = [];
     credits: Credits[] = [];
@@ -101,6 +109,13 @@ export class MoviePageComponent implements OnInit {
     this.idmovie = this.route.snapshot.paramMap.get("id")!;
     this.GetDetails();
     this.getcomentarios();
+    
+	//TorrentSearchApi.enablePublicProviders();
+	//TorrentSearchApi.enableProvider('Torrent9');
+	/*
+	// Search '1080' in 'Movies' category and limit to 20 results
+	const torrents =  TorrentSearchApi.search('1080', 'Movies', 20);
+	 */
   }
 
     GetDetails(){

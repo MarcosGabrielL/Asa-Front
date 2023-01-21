@@ -54,7 +54,7 @@ export class HomeGeralFilmesComponent implements OnInit {
             this.theTradingString = "";
             let cont = 0;
         this.resultTrading.forEach( (a) => {
-                    if(cont <=5){
+                    if(cont ==0){
                         }else{
                                 this.theTradingString = this.theTradingString.concat
                             ("<li>"+

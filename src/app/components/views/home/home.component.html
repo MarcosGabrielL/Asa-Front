@@ -30,7 +30,7 @@
     <mat-sidenav class="side" mode="side" opened>
             <aside class="sidebar">
                     <menu class="menu">
-				<p class="menu-name"><b>Categorias</b></p>
+				<p class="menu-name" style="color: #333;"><b>Categorias</b></p>
 				<ul >
         <li #myli class="active" (click)="my3li.classList.remove('active');
                                                      my2li.classList.remove('active');
@@ -407,9 +407,11 @@
     </mat-sidenav>
 
     <mat-sidenav-content class="nave">
+    <div style="    background-color: #333333;">
         <router-outlet>
-            
+           
         </router-outlet>
+        </div>
     </mat-sidenav-content>
 
 </mat-sidenav-container>

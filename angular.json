@@ -14,6 +14,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/asadmovie-front",
+             "allowedCommonJsDependencies": ["crypto"], // note that this is the key of --> "crypto":["node_modules/crypto-js"]"
+             
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
