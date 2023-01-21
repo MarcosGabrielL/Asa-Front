@@ -133,3 +133,17 @@ export interface Comentario{
         curtidas_5_estrela?: String;
         score?: String ;
 }
+
+export interface Torrent {
+	
+	  idioma: String
+	  url: String;
+	  type:String;
+	  name: String;
+	  uploaded: String;
+	 tamanho: String;
+	 seeders: String;
+}
+	
+	
+	

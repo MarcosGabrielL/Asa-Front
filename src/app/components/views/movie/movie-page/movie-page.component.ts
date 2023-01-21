@@ -128,6 +128,7 @@ export class MoviePageComponent implements OnInit {
                     this.release_dateString = this.release_dateString.substring(0, 8);
                 this.imagePath = "https://image.tmdb.org/t/p/w300_and_h450_bestv2/"+Object.values(resposta)[12];
                 this.vote_averageString = ""+Object.values(resposta)[23];
+                this.vote_averageString = this.vote_averageString.substring(0,4);
                 this.overviewString = ""+Object.values(resposta)[10];
                 this.runtimeString = ""+Object.values(resposta)[17] + " Min";
                 this.generos = Object.values(Object.values(resposta)[4]);
