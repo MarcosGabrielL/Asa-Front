@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 
 import { ComentarioService } from '../comentario.service';
 import { MovieService } from '../movie.service';
-import { MovieDetails } from '../movie.model';
+import { MovieDetails , Torrent} from '../movie.model';
 import { Credits } from '../movie.model';
 import { Cast } from '../movie.model';
 import { Crew } from '../movie.model';
@@ -62,6 +62,7 @@ export class MoviePageComponent implements OnInit {
               
     
     moviedetails: MovieDetails[] = [];
+    Torrents: Torrent[] = [];
     credits: Credits[] = [];
     cast: Cast[] = [];
     crew: Crew[] = [];
@@ -128,12 +129,7 @@ export class MoviePageComponent implements OnInit {
     this.GetDetails();
     this.getcomentarios();
     
-	//TorrentSearchApi.enablePublicProviders();
-	//TorrentSearchApi.enableProvider('Torrent9');
-	/*
-	// Search '1080' in 'Movies' category and limit to 20 results
-	const torrents =  TorrentSearchApi.search('1080', 'Movies', 20);
-	 */
+	
   }
 
     GetDetails(){
@@ -142,7 +138,10 @@ export class MoviePageComponent implements OnInit {
             console.log(resposta);
 
                  this.tituloString = ""+Object.values(resposta)[21];
+                 this.getTorrents();
+                
                 this.release_dateString = "<br>"+Object.values(resposta)[15];
+                
                     this.release_dateString = this.release_dateString.substring(0, 8);
                 this.imagePath = "https://image.tmdb.org/t/p/w300_and_h450_bestv2/"+Object.values(resposta)[12];
                 this.vote_averageString = ""+Object.values(resposta)[23];
@@ -335,6 +334,18 @@ export class MoviePageComponent implements OnInit {
 	}
 	
 	
-
+	getTorrents(){
+	this.service.GetTorrentsDublado(this.tituloString ).subscribe((result)=> {
+       this.Torrents = Object.values(result);
+        //console.log("This.Torrentes" +this.Torrents);
+	this.showcomentarios();
+        }, () => {
+        //console.log(result);
+         });  
+    }
+    
+    sanitize(url:any){
+    return this.sanitizer.bypassSecurityTrustUrl(url);
+}
 	
 }

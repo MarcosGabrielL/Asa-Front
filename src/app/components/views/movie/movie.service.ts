@@ -12,6 +12,8 @@ import { Genre } from './movie.model';
 })
 export class MovieService {
 
+baseUrl: String = environment.baseUrl;
+
   constructor(private http: HttpClient, private _snack: MatSnackBar) { }
 
     
@@ -23,7 +25,8 @@ export class MovieService {
     
     GetTorrentsDublado(query: String): Observable<Torrent[]>{
 	 
-	  var requestURL = "http://localhost:8080/movies/torrents/" + query;
+	  var requestURL = this.baseUrl + "/movies/torrents/" + query;
+	  console.log(requestURL);
         return this.http.get<Torrent[]>(requestURL)
 	}
 
