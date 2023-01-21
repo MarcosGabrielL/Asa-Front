@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 import { MovieDetails,Torrent } from './movie.model';
 import { Genre } from './movie.model';
 
+
 @Injectable({
   providedIn: 'root'
 })

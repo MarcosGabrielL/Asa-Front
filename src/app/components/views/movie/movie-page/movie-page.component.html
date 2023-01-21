@@ -1,4 +1,30 @@
 
+<div
+	style="position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.7); z-index: 99990000;">
+	<div
+		Style="background: #fff; border-radius: 0; box-shadow: 0 2px 8px #333; min-width: 320px; position: fixed; left: 50%; padding: 24px; top: 50%; transform: translate(-50%, -50%); z-index: 999900000;">
+
+		<div class="container1">
+			<div class="cookiesContent" id="cookiesPopup"
+				style="width: 50%; display: flex; flex-direction: column; align-items: center; background-color: #fff; color: #000; text-align: center; border-radius: 20px; padding: 30px 30px 70px;">
+				<button class="close"
+					style="width: 30px; font-size: 20px; color: #c0c5cb; align-self: flex-end; background-color: transparent; border: none; margin-bottom: 10px;">✖</button>
+				<img style="width: 82px; margin-bottom: 15px;"
+					src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png"
+					alt="cookies-img" />
+				<p style="margin-bottom: 40px; font-size: 18px;">We use cookies
+					for improving user experience, analytics and marketing.</p>
+				<button class="accept"
+					style="background-color: #ed6755; border: none; border-radius: 5px; width: 200px; padding: 14px; font-size: 16px; color: white; box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);">That's
+					fine!</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -1325,8 +1351,8 @@ div.overlay-blue:hover {background-color: rgba(13, 27, 43, 0.5);}
                 <li class="add-to-watchlist">
                   <a href= "#"><i class="fas fa-star" style="font-size: 20px; color: #333333;"></i></a>    
                 </li>
-                <li class="play-trailer">
-                    <span style="color: #333333;"><i style="font-size: 20px;" class="fas fa-download"></i></span>
+                <li class="play-trailer" >
+                    <span style="color: #333333; cursor: pointer;" (click)="toggle()"><i style="font-size: 20px;" class="fas fa-download"></i></span>
                 </li>
               </ul>
             </div>
@@ -1428,4 +1454,24 @@ div.overlay-blue:hover {background-color: rgba(13, 27, 43, 0.5);}
 	</div>
 
 </div>
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

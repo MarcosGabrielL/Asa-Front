@@ -1,7 +1,8 @@
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation,ViewChild, ElementRef } from '@angular/core';
+import { Type } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform, NgModule} from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
 import { formatDate } from "@angular/common";
 import { Observable } from 'rxjs';
@@ -25,23 +26,38 @@ import { User } from '../../cinefilo/user.model';
 import { Cinefilo } from '../../cinefilo/cinefilo.model';
 import { CinefiloService } from '../../cinefilo/cinefilo.service';
 
-import * as TorrentSearchApi from 'torrent-search-api';
+
+
+import {NgbModal, ModalDismissReasons, NgbModalConfig,NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+//import { NgxDropzoneModule } from 'ngx-dropzone';
+import { TorrentsModalComponent } from '../movie-page/torrents-modal/torrents-modal.component';
 
 @Component({
   selector: 'app-movie-page',
   templateUrl: './movie-page.component.html',
   styleUrls: ['./movie-page.component.css'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None ,
+    providers: [NgbModalConfig, NgbModal],
+    
 })
 
 export class MoviePageComponent implements OnInit {
 	
+	mostrar: boolean = false;
+
+  toggle () {
+    this.mostrar = !this.mostrar;
+  }
+
 	
 
-  constructor(private comentarioservice : ComentarioService , private service: MovieService,  private route: ActivatedRoute, private sanitizer: DomSanitizer,
+  constructor(config: NgbModalConfig, private modalService: NgbModal, private comentarioservice : ComentarioService , private service: MovieService,  private route: ActivatedRoute, private sanitizer: DomSanitizer,
             private authenticationService: LoginService,
             private cinefiloservice : CinefiloService,
-              private userservice : UserService) { }
+              private userservice : UserService) { 
+	config.backdrop = 'static';
+		config.keyboard = false;
+}
               
               
     
@@ -104,6 +120,8 @@ export class MoviePageComponent implements OnInit {
                         "telefone": "",
                         "idade":"",
                         "foto":""};
+                        
+                          closeResult = '';
 
   ngOnInit(): void {
     this.idmovie = this.route.snapshot.paramMap.get("id")!;
@@ -315,6 +333,8 @@ export class MoviePageComponent implements OnInit {
 
                 }
 	}
+	
+	
 
-
+	
 }

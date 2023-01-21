@@ -49,6 +49,8 @@ import { RegisterComponent } from './components/security/register/register.compo
 import { ForgotComponent } from './components/security/forgot/forgot.component';
 import { HttpInterceptorService } from './components/security/httpinterceptor.service';
 import { PagenotfoundComponent } from './components/template/pagenotfound/pagenotfound.component';
+import { TorrentsModalComponent } from './components/views/movie/movie-page/torrents-modal/torrents-modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -81,7 +83,8 @@ import { PagenotfoundComponent } from './components/template/pagenotfound/pageno
     LoginComponent,
     RegisterComponent,
     ForgotComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    TorrentsModalComponent
   ],
   imports: [
     BrowserModule,
@@ -101,6 +104,7 @@ import { PagenotfoundComponent } from './components/template/pagenotfound/pageno
     MatSnackBarModule,
     BrowserAnimationsModule,
     CarouselModule,
+    NgbModule,
   ],
   providers: [
      {
