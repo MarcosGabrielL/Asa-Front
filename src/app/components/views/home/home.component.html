@@ -1,3 +1,6 @@
+<head><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script></head>
+
+
 <title>Asa - Filmes Populares</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
@@ -26,7 +29,11 @@
 </style>
 
 <!-- Nav -->
-<mat-sidenav-container class="container">
+<mat-sidenav-container class="container" style="    padding-right: 0;
+     padding-left: 0;
+     margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;">
     <mat-sidenav class="side" mode="side" opened>
             <aside class="sidebar">
                     <menu class="menu">
@@ -402,6 +409,8 @@
 				</ul>
 
 				<div class="separator"></div>
+				
+			 <app-torrents-modal ></app-torrents-modal>
 			</menu>
 		</aside>
     </mat-sidenav>
@@ -415,3 +424,11 @@
     </mat-sidenav-content>
 
 </mat-sidenav-container>
+
+<div style="display:none;">
+	<iframe id="s" width="560" height="315"
+		src="https://www.youtube.com/embed/XFl51roV_Y8?autoplay=1&mute=1&controls=0"
+		title="YouTube video player" frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+</div>

@@ -53,6 +53,8 @@ import { TorrentsModalComponent } from './components/views/movie/movie-page/torr
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { AdsenseModule } from 'ng2-adsense';
+import { AdsHorizontalComponent } from './components/template/ads-horizontal/ads-horizontal.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +88,8 @@ import { TranslateModule } from '@ngx-translate/core';
     RegisterComponent,
     ForgotComponent,
     PagenotfoundComponent,
-    TorrentsModalComponent
+    TorrentsModalComponent,
+    AdsHorizontalComponent
   ],
   imports: [
     BrowserModule,
@@ -107,7 +110,8 @@ import { TranslateModule } from '@ngx-translate/core';
     BrowserAnimationsModule,
     CarouselModule,
     NgbModule,
-    TranslateModule
+    TranslateModule,
+     AdsenseModule.forRoot()
   ],
   providers: [
      {

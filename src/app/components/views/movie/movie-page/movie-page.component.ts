@@ -1,4 +1,4 @@
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { OwlOptions,CarouselModule } from 'ngx-owl-carousel-o';
 import { Component, OnInit, ViewEncapsulation,ViewChild, ElementRef } from '@angular/core';
 import { Type } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -28,9 +28,6 @@ import { CinefiloService } from '../../cinefilo/cinefilo.service';
 
 
 import {NgbModal, ModalDismissReasons, NgbModalConfig,NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-//import { NgxDropzoneModule } from 'ngx-dropzone';
-import { TorrentsModalComponent } from '../movie-page/torrents-modal/torrents-modal.component';
-
 @Component({
   selector: 'app-movie-page',
   templateUrl: './movie-page.component.html',
@@ -41,6 +38,31 @@ import { TorrentsModalComponent } from '../movie-page/torrents-modal/torrents-mo
 })
 
 export class MoviePageComponent implements OnInit {
+	
+	customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
 	
 	mostrar: boolean = false;
 
@@ -148,12 +170,14 @@ export class MoviePageComponent implements OnInit {
                 this.vote_averageString = ""+Object.values(resposta)[23];
                 this.vote_averageString = this.vote_averageString.substring(0,4);
                 this.overviewString = ""+Object.values(resposta)[10];
+                this.overviewString = this.overviewString.substring(0, 180).concat("...");
                 this.runtimeString = ""+Object.values(resposta)[17] + " Min";
                 this.generos = Object.values(Object.values(resposta)[4]);
                 //console.log(this.generos[0].name);
                      this.generos.forEach( (a) => {
                      this.generosString = this.generosString.concat(" "+a.name + ", ");
                      });
+                     this.generosString = this.generosString.substring(0,30).concat("...");
                 const firstValue = Object.values(resposta)[26];
                 this.credits = Object.values(firstValue);
                 //console.log(this.credits);
@@ -173,7 +197,8 @@ export class MoviePageComponent implements OnInit {
                 //console.log(this.video);
                     if(""+this.video[4] === "YouTube"){
                            // console.log("É Youtube");
-                            this.trailerPath = "https://www.youtube.com/embed/"+this.video[3]+"?controls=0";
+                          // console.log(this.video[3]);
+                            this.trailerPath = "https://www.youtube.com/embed/"+this.video[3]+"?autoplay=1&controls=0";
                             //this.sanitizer.bypassSecurityTrustResourceUrl(this.pdfSrc);
                     }
 
@@ -181,21 +206,7 @@ export class MoviePageComponent implements OnInit {
             });  
     }
     
-   customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 600,
-    navText: ["<i style='font-size: 28px;' class='fa fa-chevron-left'></i>", "<i style='font-size: 28px;' class='fa fa-chevron-right'></i>"],
-    responsive: {
-      0: {
-        items: 1 
-      }
-    },
-    nav: true
-  }
+  
 
     videoURL() {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.trailerPath);

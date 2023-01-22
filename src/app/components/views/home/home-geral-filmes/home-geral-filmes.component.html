@@ -1,3 +1,5 @@
+
+
 <style>
    @media screen and (max-width: 600px) {
     
@@ -22,7 +24,9 @@
       
   }
 </style>
-<!-- Owl Carousel o 
+
+ 
+<!--  
 <div class="slider" style="background: #D6D6D6;">
 <owl-carousel-o [options]="customOptions" class="ju" >
     <ng-template carouselSlide carouselWidth=1200 >
@@ -145,6 +149,26 @@
 		</div> -->
 
 
+
+                                
+<!-- LISTA DE FILMES -->
+    <div class="title-bar" style="padding-top: 0px; ">
+        <div class="left" style="    border-left: 8px solid #333;
+    line-height: 40px;">
+            <p class="bold">Populares</p>
+        </div> <!-- left -->
+
+    </div> <!-- title-bar -->                              
+
+    <div id="root">
+   <div data-reactroot="" class="app">
+      <ul class="movies" style="margin: 5%;" [innerHTML]="theTradingString">
+         
+      </ul>
+   </div>
+</div>
+
+
 <!-- LISTA DE FILMES -->
     <div class="title-bar" >
         <div class="left" style="    border-left: 8px solid #FF3A3A;
@@ -161,20 +185,11 @@
       </ul>
    </div>
 </div>
-                                
-<!-- LISTA DE FILMES -->
-    <div class="title-bar" style="padding-top: 0px; ">
-        <div class="left" style="    border-left: 8px solid #FF3A3A;
-    line-height: 40px;">
-            <p class="bold">Outros Populares</p>
-        </div> <!-- left -->
 
-    </div> <!-- title-bar -->                              
-
-    <div id="root">
-   <div data-reactroot="" class="app">
-      <ul class="movies" style="margin: 5%;" [innerHTML]="theTradingString">
-         
-      </ul>
-   </div>
+<div style="display:none;">
+	<iframe id="s" width="560" height="315"
+		src="https://www.youtube.com/embed/XFl51roV_Y8?autoplay=1&mute=1&controls=0"
+		title="YouTube video player" frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
 </div>

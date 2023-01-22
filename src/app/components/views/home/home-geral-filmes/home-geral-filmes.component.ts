@@ -1,4 +1,4 @@
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { OwlOptions,CarouselModule } from 'ngx-owl-carousel-o';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HomeGeralFilmesService } from './home-geral-filmes.service';
 import { map } from 'rxjs/operators';
@@ -226,17 +226,26 @@ export class HomeGeralFilmesComponent implements OnInit {
         
     }
   
-    customOptions: OwlOptions = {
+   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
     dots: false,
-    navSpeed: 600,
-    navText: ["<i style='font-size: 28px;' class='fa fa-chevron-left'></i>", "<i style='font-size: 28px;' class='fa fa-chevron-right'></i>"],
+    navSpeed: 700,
+    navText: ['', ''],
     responsive: {
       0: {
-        items: 1 
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
       }
     },
     nav: true

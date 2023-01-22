@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-
-import {Observable} from 'rxjs';
+import { AdsenseModule } from 'ng2-adsense';
 
 
 @Component({
@@ -10,10 +9,5 @@ import {Observable} from 'rxjs';
 })
 export class TorrentsModalComponent {
 	
-	mostrar: boolean = false;
-
-  toggle () {
-    this.mostrar = !this.mostrar;
-  }
-
+	
 }

@@ -30,6 +30,7 @@
     "crypto-browserify": "^3.12.0",
     "https-browserify": "^1.0.0",
     "mdb-angular-ui-kit": "^4.0.0",
+    "ng2-adsense": "^11.0.0",
     "ngx-owl-carousel-o": "^15.0.0",
     "node-fetch": "^3.3.0",
     "os-browserify": "^0.3.0",

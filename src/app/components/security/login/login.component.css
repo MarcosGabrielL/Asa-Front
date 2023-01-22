@@ -20,11 +20,11 @@ body {
 }
 
 .screen {		
-	background: linear-gradient(90deg, #333333, #000);		
+	background: linear-gradient(90deg, #fff, #e8e8e8);		
 	position: relative;	
 	height: 600px;
 	    width: 30%;	
-	box-shadow: 0px 0px 24px #000000;
+	/*box-shadow: 0px 0px 24px #000000;*/
 }
 
 .screen__content {
@@ -61,7 +61,7 @@ body {
 .screen__background__shape2 {
 	height: 220px;
 	width: 220px;
-	background: linear-gradient(200deg, #000, #333333);	
+	background: linear-gradient(200deg, #000, #fff);	
 	top: -172px;
 	right: 0;	
 	border-radius: 32px;
@@ -70,7 +70,7 @@ body {
 .screen__background__shape3 {
 	height: 540px;
 	width: 190px;
-	background: linear-gradient(200deg, #000, #333333);
+	background: linear-gradient(200deg, #000, #fff);
 	top: -24px;
 	right: 0;	
 	border-radius: 32px;
@@ -79,7 +79,7 @@ body {
 .screen__background__shape4 {
 	height: 400px;
 	width: 200px;
-	background: linear-gradient(200deg, #000, #333333);	
+	background: linear-gradient(200deg, #000, #fff);	
 	top: 420px;
 	right: 50px;	
 	border-radius: 60px;
