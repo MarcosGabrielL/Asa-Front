@@ -579,12 +579,12 @@ a:hover {
 						<div class="line"></div>
 						<div class="line"></div>
 					</li>
-                                        <li #my2li class="active"
-                                            (click)="myli.classList.remove('active'); my2li.classList.add('active'); my3li.classList.remove('active'); my4li.classList.remove('active');my5li.classList.remove('active') ">
+                                        <li #my2li [ngClass]="filme ? 'active' : ''"
+                                            (click)=" myli.classList.remove('active'); my2li.classList.add('active'); my3li.classList.remove('active'); my4li.classList.remove('active');my5li.classList.remove('active') ">
                                             <a routerLink="">Filmes</a></li>
-					<li #myli 
+					<li #myli [ngClass]="serie ? 'active' : ''"
                                             (click)="myli.classList.add('active'); my2li.classList.remove('active'); my3li.classList.remove('active'); my4li.classList.remove('active');my5li.classList.remove('active') ">
-                                            <a a routerLink="home-serie">Séries</a></li>
+                                            <a a routerLink="/series">Séries</a></li>
 					<li #my3li
                                             (click)="myli.classList.remove('active'); my2li.classList.remove('active'); my3li.classList.add('active'); my4li.classList.remove('active');my5li.classList.remove('active') ">
                                             <a routerLink="home-noticias">Noticias</a></li>

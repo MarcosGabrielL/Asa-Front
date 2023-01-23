@@ -1617,8 +1617,10 @@ div.overlay-blue:hover {
 			style="background-position: center; background-size: auto; background-color: #d1d1d1; background-blend-mode: multiply;">
 			<div class="content">
 				<div class="image">
-					<img style="  padding-right: 10%;
-    margin-right: 5%;"
+					<img style="
+    padding-right: 10%;
+    margin-right: 5%;
+"
 						[src]="imagePath" />
 				</div>
 				<div class="info">
@@ -1657,8 +1659,9 @@ div.overlay-blue:hover {
 									class="fas fa-star" style="font-size: 20px; color: #9999;
     opacity: 0.5;"></i></a>
 							</li>
+							<!-- (click)="toggle()" -->
 							<li class="play-trailer"><span
-								style="color: #333333; cursor: pointer;" (click)="toggle()"><i
+								style="color: #9999; cursor: pointer;" ><i 
 									style="font-size: 20px;" class="fas fa-download"></i></span></li>
 						</ul>
 					</div>
@@ -1750,7 +1753,7 @@ div.overlay-blue:hover {
 
 		</ul>
 		<!-- Contenedor lado -->
-		<div class="lado">
+		<div class="lado" style="">
 			<nav class="menu-left menu-left-open"
 				style="right: 6%; opacity: 1; width: 24%; background: #fff; height: auto;">
 				<h1>Elenco</h1>

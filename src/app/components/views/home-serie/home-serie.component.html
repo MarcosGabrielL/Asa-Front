@@ -1,1 +1,180 @@
-<p>home-serie works!</p>
+
+
+<style>
+   @media screen and (max-width: 600px) {
+    
+      .slider{
+           display: none;
+      }
+     .title-bar .left{
+       display: contents;
+     }
+     .app {
+         margin-left: 7%;
+        margin-right: 15%;
+     }
+     .movies {
+        display: grid;
+        grid-gap: 2em 1em;
+        grid-template-columns: repeat(auto-fill,minmax(7em,1fr));
+        list-style: none;
+        /* margin: 5%; */
+        padding: 0;
+     }
+      
+  }
+</style>
+
+ 
+<!--  
+<div class="slider" style="background: #D6D6D6;">
+<owl-carousel-o [options]="customOptions" class="ju" >
+    <ng-template carouselSlide carouselWidth=1200 >
+        <div class="slide" style=" margin-left: 15%; margin-right: 15%" >
+            <div class="slide flex" [innerHTML]="thePrincipalString">
+                <div class="slide-image slider-link prev" ><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">Vingadores: Ultimato</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slide" style=" margin-left: 15%; margin-right: 15%" >
+          <div class="slide flex" [innerHTML]="thePrincipalString1">
+		<div class="slide-image slider-link prev"><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">Vingadores: Ultimato</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slide" style=" margin-left: 15%; margin-right: 15%" >
+          <div class="slide flex" [innerHTML]="thePrincipalString2">
+		<div class="slide-image slider-link prev"><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">Vingadores: Ultimato</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+         <div class="slide" style=" margin-left: 15%; margin-right: 15%" >
+          <div class="slide flex" [innerHTML]="thePrincipalString3">
+		<div class="slide-image slider-link prev"><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">Vingadores: Ultimato</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slide" style=" margin-left: 15%; margin-right: 15%" >
+          <div class="slide flex" [innerHTML]="thePrincipalString4">
+		<div class="slide-image slider-link prev"><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">Vingadores: Ultimato</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+        </div>
+    </ng-template>
+</owl-carousel-o>
+</div>
+-->
+<!-- SLIDER
+<div class="window-margin">
+	<div class="window">
+		<div class="slider" style="background: #D1D1D1;
+    margin-bottom: 6vw;">
+<div class="slider-wrapper flex">
+	<div class="slide flex">
+		<div class="slide-image slider-link prev"><img src="https://img.elo7.com.br/product/original/2678F78/cartaz-poster-vingadores-4-ultimato-filme-marvel-avengers-colecionador.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">Vingadores: Ultimato</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+	<div class="slide flex">
+		<div class="slide-image slider-link next"><img src="https://media.fstatic.com/oTEzZ557rQjZueDDptRaFvpn9Ts=/210x312/smart/media/movies/covers/2021/07/E7jF7W6X0AYucYc.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">30.08.2017.</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>	
+	<div class="slide flex">
+		<div class="slide-image slider-link next"><img src="https://media.fstatic.com/D4i9cuFv1lJMy1WCOhY-Es0s9Hg=/210x312/smart/media/movies/covers/2019/09/kings_man_ver2.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">30.09.2017.</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+		<div class="slide flex">
+		<div class="slide-image slider-link next"><img src="https://media.fstatic.com/DJsRj7JWce_W-iMmbqG1y5tE5_4=/210x312/smart/media/movies/covers/2020/07/honest_thief.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">30.10.2017.</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+</div>
+<div class="arrows">
+<a  title="Previous" class="arrow slider-link prev"></a>
+<a  title="Next" class="arrow slider-link next"></a>
+</div>
+</div>
+			</div>
+		</div> -->
+
+
+
+                                
+<!-- LISTA DE FILMES -->
+    <div class="title-bar" style="padding-top: 0px; ">
+        <div class="left" style="    border-left: 8px solid #333;
+    line-height: 40px;">
+            <p class="bold">Populares</p>
+        </div> <!-- left -->
+
+    </div> <!-- title-bar -->                              
+
+    <div id="root">
+   <div data-reactroot="" class="app">
+      <ul class="movies" style="margin: 5%;" [innerHTML]="theTradingString">
+         
+      </ul>
+   </div>
+</div>
+
+
+
+
+<div style="display:none;">
+	<iframe id="s" width="560" height="315"
+		src="https://www.youtube.com/embed/XFl51roV_Y8?autoplay=1&mute=1&controls=0"
+		title="YouTube video player" frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+</div>

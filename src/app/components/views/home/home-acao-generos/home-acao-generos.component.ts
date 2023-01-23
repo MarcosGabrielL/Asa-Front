@@ -7,14 +7,13 @@ import { Result} from '../home-geral-filmes/result.model';
 import { Root } from '../home-geral-filmes/root.model';
 
 @Component({
-  selector: 'app-home-acao-filmes',
-  templateUrl: './home-acao-filmes.component.html',
-  styleUrls: ['./home-acao-filmes.component.css'],
+  selector: 'app-home-acao-generos',
+  templateUrl: './home-acao-generos.component.html',
+  styleUrls: ['./home-acao-generos.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class HomeAcaoFilmesComponent implements OnInit {
-
-      @Input()
+export class HomeAcaoGenerosComponent {
+  @Input()
      genero: string = "";
      theTradingString: string = "";
      result: Result[] = [];
@@ -45,37 +44,38 @@ export class HomeAcaoFilmesComponent implements OnInit {
   }
     //GEt Movies by genre
     GetMoviesGenre(){
-        this.service.GetMoviesGenre(this.genero).subscribe((resposta) => {
+        this.service.GetTvGenre(this.genero).subscribe((resposta) => {
             this.root = resposta;
-            console.log(resposta); 
-            const firstValue = Object.values(this.root)[2];
+            //console.log(resposta); 
+            const firstValue = Object.values(this.root)[1];
             this.result = Object.values(firstValue);
-            //console.log(this.resultLatest);
-           // this.showMovies();
+            //console.log(this.result);
+           //this.showMovies();
              //this.showMovies();
             }); 
     }
     
     GetMoviesGenrePAge2(){
-        this.service.GetMoviesGenrePAge2(this.genero).subscribe((resposta) => {
+        this.service.GetTvGenrePAge2(this.genero).subscribe((resposta) => {
             this.root = resposta;
-            console.log(resposta); 
-            const firstValue = Object.values(this.root)[2];
+            //console.log(resposta); 
+            const firstValue = Object.values(this.root)[1];
             this.result = this.result.concat(Object.values(firstValue));
             //console.log(this.resultLatest);
-           // this.showMovies();
+            this.showMovies();
              //this.showMovies();
             }); 
     }
     
     GetMoviesGenrePAge3(){
-        this.service.GetMoviesGenrePAge3(this.genero).subscribe((resposta) => {
+        this.service.GetTvGenrePAge3(this.genero).subscribe((resposta) => {
             this.root = resposta;
-            console.log(resposta); 
-            const firstValue = Object.values(this.root)[2];
+           // console.log(resposta); 
+            const firstValue = Object.values(this.root)[1];
             this.result = this.result.concat(Object.values(firstValue));
+            
             //console.log(this.resultLatest);
-            this.showMovies();
+           this.showMovies();
              //this.showMovies();
             }); 
     }
@@ -88,7 +88,7 @@ export class HomeAcaoFilmesComponent implements OnInit {
                             ("<li>"+
                     "<div class='movie'>"+
                        "<figure class='movie__figure'>"+
-                            "<a  href='/filme/"+a.id+"\'>"+
+                            "<a  href='/serie/"+a.id+"\'>"+
                                 "<img src='https://image.tmdb.org/t/p/w300"+a.poster_path+"' class='movie__poster'>"+
                             "</a>" +
                        " <figcaption><span class='movie__vote'>"+a.vote_average+"</span></figcaption>"+

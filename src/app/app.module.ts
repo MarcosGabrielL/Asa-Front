@@ -55,6 +55,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
 import { AdsenseModule } from 'ng2-adsense';
 import { AdsHorizontalComponent } from './components/template/ads-horizontal/ads-horizontal.component';
+import { DownloadPageComponent } from './components/template/download-page/download-page.component';
+import { SeriePageComponent } from './components/views/serie/serie-page/serie-page.component';
+import { HomeAcaoSerieComponent } from './components/views/home/home-acao-serie/home-acao-serie.component';
+import { HomeAcaoGenerosComponent } from './components/views/home/home-acao-generos/home-acao-generos.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +93,11 @@ import { AdsHorizontalComponent } from './components/template/ads-horizontal/ads
     ForgotComponent,
     PagenotfoundComponent,
     TorrentsModalComponent,
-    AdsHorizontalComponent
+    AdsHorizontalComponent,
+    DownloadPageComponent,
+    SeriePageComponent,
+    HomeAcaoSerieComponent,
+    HomeAcaoGenerosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,291 @@
+
+.sidebar .menu {
+  padding-top: 5%;
+    background: #e8e8e8;
+    height: 95%;
+}
+.sidebar .menu .separator {
+  border-top: 1px solid #111111;
+  border-bottom: 1px solid #353535;
+  margin: 20px;
+}
+.sidebar .menu a {
+  color: #4e4e4e;
+  text-decoration: none;
+}
+.sidebar .menu a:hover {
+   color: #1b1b1b;
+  background: #fffc45;
+}
+.sidebar .menu .menu-name {
+  text-transform: uppercase;
+  padding: 0 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.sidebar .menu > ul.no-bullets > li a:before {
+  content: none !important;
+}
+.sidebar .menu > ul > li {
+  list-style: none;
+  list-style-type:none;
+}
+.sidebar .menu > ul{
+}
+.sidebar .menu > ul > li > a {
+  position: relative;
+  top: -3px;
+  font-size: 15px;
+  padding: 8px 25px;
+  display: block;
+  font-weight: bold;
+  list-style: none;
+  list-style-type:none;
+}
+.sidebar .menu > ul > li > a:before {
+  
+  height: 9px;
+  width: 9px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  box-shadow: inset 0 0 0 1px #EEE;
+}
+.sidebar .menu > ul > li.active {
+  color: #FF3A3A;
+  padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #FF3A3A;
+}
+.sidebar .menu > ul > li.active > a:hover{
+  color: #FFFFFF;
+    background-color: #FF3A3A;
+}
+.sidebar .menu > ul > li.active > a {
+  padding-bottom: 0;
+      color: #FFFFFF;
+}
+.sidebar .menu > ul > li.active > a:before {
+  background: #FF3A3A;
+  box-shadow: none;
+}
+.sidebar .menu > ul > li.active ul {
+  display: block;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+.sidebar .menu > ul > li.active ul li.active a {
+  color: #FFF;
+  font-weight: bold;
+}
+.sidebar .menu > ul > li.active ul li a {
+  padding: 5px;
+  display: block;
+  font-size: 13px;
+  color: #888;
+}
+.sidebar .menu > ul > li.active ul li a:hover {
+  color: #FFF;
+}
+.sidebar .menu > ul > li ul {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+}
+
+i {
+    padding-right: .6rem;
+}
+
+.side {
+    width: 250px; 
+    height: auto;
+    background:  #e8e8e8;
+}
+
+mat-nav-list {
+    justify-content: center;
+}
+
+.nav {
+    width: 50%;
+}
+
+
+.window {
+  margin: auto;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.window .sidebar .top-bar,
+.window .main .top-bar {
+  height: 50px;
+  color: #FFF;
+    text-align: center;
+
+}
+.window .sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background: #e8e8e8;
+  transition-duration: 0.3s;
+  color: #4e4e4e;
+}
+.window .sidebar .top-bar {
+  background: #1b1b1b;
+  overflow: hidden;
+}
+.window .sidebar .top-bar .logo {
+      /* float: left; */
+    font-family: sans-serif;
+    font-size: 30px;
+    line-height: 50px;
+    /* margin-left: 20px; */
+    color: #FF3A3A;
+    text-align: center;
+}
+.window .sidebar .search-box {
+  background: #e8e8e8;
+  padding: 20px;
+  position: relative;
+}
+.window .sidebar .search-box input {
+  width: 170px;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 50px;
+  outline: none;
+  color: #999;
+  transition-duration: 0.3s;
+}
+.window .sidebar .search-box input:focus {
+  color: #333;
+}
+.window .sidebar .search-box input:focus ~ .fa {
+  color: #999;
+}
+.window .sidebar .search-box .fa {
+  position: absolute;
+  top: 31px;
+  right: 35px;
+  color: #CCC;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.window .sidebar .menu {
+  padding-top: 20px;
+}
+.window .sidebar .menu .separator {
+  border-top: 1px solid #111111;
+  border-bottom: 1px solid #353535;
+  margin: 20px;
+}
+.window .sidebar .menu a {
+  color: #4e4e4e;
+  text-decoration: none;
+}
+.window .sidebar .menu a:hover {
+   color: #1b1b1b;
+  background: #fffc45;
+}
+.window .sidebar .menu .menu-name {
+  text-transform: uppercase;
+  padding: 0 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.window .sidebar .menu > ul.no-bullets > li a:before {
+  content: none !important;
+}
+.window .sidebar .menu > ul > li {
+  list-style: none;
+}
+.window .sidebar .menu > ul > li > a {
+  position: relative;
+  top: -3px;
+  font-size: 15px;
+  padding: 8px 25px;
+  display: block;
+  font-weight: bold;
+}
+.window .sidebar .menu > ul > li > a:before {
+  content: '';
+  height: 9px;
+  width: 9px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  box-shadow: inset 0 0 0 1px #EEE;
+}
+.window .sidebar .menu > ul > li.active {
+  color: #FF3A3A;
+  padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #FF3A3A;
+}
+.window .sidebar .menu > ul > li.active > a:hover{
+  color: #FFFFFF;
+    background-color: #FF3A3A;
+}
+.window .sidebar .menu > ul > li.active > a {
+  padding-bottom: 0;
+      color: #FFFFFF;
+}
+.window .sidebar .menu > ul > li.active > a:before {
+  background: #FF3A3A;
+  box-shadow: none;
+}
+.window .sidebar .menu > ul > li.active ul {
+  display: block;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+.window .sidebar .menu > ul > li.active ul li.active a {
+  color: #FFF;
+  font-weight: bold;
+}
+.window .sidebar .menu > ul > li.active ul li a {
+  padding: 5px;
+  display: block;
+  font-size: 13px;
+  color: #888;
+}
+.window .sidebar .menu > ul > li.active ul li a:hover {
+  color: #FFF;
+}
+.window .sidebar .menu > ul > li ul {
+  display: none;
+}
+
+
+
+
+
+
+
+

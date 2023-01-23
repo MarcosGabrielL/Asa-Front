@@ -18,6 +18,13 @@ import { HttpInterceptorService } from './components/security/httpinterceptor.se
 import { LoginComponent } from './components/security/login/login.component';
 import { RegisterComponent } from './components/security/register/register.component';
 
+import { SeriePageComponent } from './components/views/serie/serie-page/serie-page.component';
+
+import { HomeAcaoGenerosComponent } from './components/views/home/home-acao-generos/home-acao-generos.component';
+
+import { HomeAcaoSerieComponent } from './components/views/home/home-acao-serie/home-acao-serie.component';
+
+
 const routes: Routes = [
    { path: '', redirectTo: '/home', pathMatch: 'full' },
    {
@@ -26,8 +33,19 @@ const routes: Routes = [
         children: [
                     {path: '',  component: HomeGeralFilmesComponent, pathMatch: 'full'},
                     { path: 'filmes/:genero', component: HomeAcaoFilmesComponent, pathMatch: 'full'}
+                   
                   ]
    },
+   {
+    path: 'series',
+    component: HomeAcaoSerieComponent,
+        children: [
+                   {path: '',  component: HomeSerieComponent, pathMatch: 'full'}, 
+                   { path: 'serie/:genero', component: HomeAcaoGenerosComponent, pathMatch: 'full'}
+                   
+                  ]
+   },
+    
    {
     path: 'home-serie',
     component: HomeSerieComponent
@@ -58,6 +76,11 @@ const routes: Routes = [
     path: 'filme/:id',
     component: MoviePageComponent
    },
+   {
+    path: 'serie/:id',
+    component: SeriePageComponent
+   },
+   
    {
     path: 'busca/filme',
     component: MovieBuscaComponent

@@ -1,0 +1,222 @@
+/*-------------------------------SLIDER------------------------------------*/
+body {background-color: #FFF; overflow-x: hidden;
+font-family: Open Sans, sans-serif;}
+.flex { display: -webkit-flex; display: flex; -webkit-flex-direction: row;  flex-direction: row; -webkit-justify-content: flex-start; justify-content: flex-start;}
+
+.window {
+  margin: auto;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.slider-wrapper div {position: relative;}
+.slider-wrapper {margin-left: 11vw;}
+.slide-image {height: 24vw;}
+.slide-image img {height: 90%;
+    cursor: pointer;
+    margin-top: 10%;
+    max-width: fit-content;
+    vertical-align: baseline;}
+.slide-content {    width: 33vw;
+    color: #fff;
+    padding: 3vw 1vw 3vw 8vw;
+}
+.slide-date {color: #FF3A3A; font-size: 20px; font-weight: 400; letter-spacing: 0.1vw; padding-bottom: 1.4vw; font-weight: bold;}
+.slide-title {font-size: 17px; font-weight: 400; letter-spacing: 0.1vw; line-height: 1.55vw; padding-bottom: 1.8vw; color: #1b1b1b; font-weight: bold;}
+.slide-text {font-size: 13px; line-height: 1.2vw; opacity: 0.8; padding-bottom: 4vw; color: #1b1b1b;}
+.slide-more {font-weight: 400; letter-spacing: 0.1vw; float: left; font-size: 0.9vw; color: #000000;}
+.slide-bullet {width: 0.5vw; height: 0.5vw; background-color: #0b8bcc; border-radius: 200%; position: relative; margin-left: 1.2vw;}
+.slide-nav {margin-left: 64vw; margin-top: -5.5vw;}
+
+div.overlay-blue {width: 100%; height: 100%; position: absolute; top: 0; transition: 0.5s ease all;}
+div.overlay-blue:hover {background-color: rgba(13, 27, 43, 0.5);}
+
+.arrows{width: 3.5vw; margin-top: -5.8vw; margin-left: 72vw; position: relative;}
+.arrow {display: inline-block; position: absolute; width: 1.2vw; height: 1.2vw; background: transparent; text-indent: -9999px; border-top: 0.15vw solid #FF3A3A; border-left: 0.15vw solid #FF3A3A; transition: all .1s ease-in-out; text-decoration: none; color: #FF3A3A;
+}
+.arrow:hover {border-color: #FF3A3A; border-width: 0.25vw;
+}
+.arrow:before {display: block; height: 200%; width: 200%; margin-left: -50%; margin-top: -50%; content: ""; transform: rotate(45deg);}
+.arrow.prev {transform: rotate(-45deg); left: 0;}
+.arrow.next {transform: rotate(135deg); right: 0;}
+
+div.overlay-blue {width: 100%; height: 100%; position: absolute; top: 0; transition: 0.5s ease all;}
+div.overlay-blue:hover {background-color: rgba(13, 27, 43, 0.5);}
+
+.arrows{width: 3.5vw; margin-top: -5.8vw; margin-left: 72vw; position: relative;}
+.arrow {display: inline-block; position: absolute; width: 1.2vw; height: 1.2vw; background: transparent; text-indent: -9999px; border-top: 0.15vw solid #fff; border-left: 0.15vw solid #fff; transition: all .1s ease-in-out; text-decoration: none; color: transparent;
+}
+.arrow:hover {border-color: #FF3A3A; border-width: 0.25vw;
+}
+.arrow:before {display: block; height: 200%; width: 200%; margin-left: -50%; margin-top: -50%; content: ""; transform: rotate(45deg);}
+.arrow.prev {transform: rotate(-45deg); left: 0;}
+.arrow.next {transform: rotate(135deg); right: 0;}
+
+/*-------------------------------SLIDER END------------------------------------*/
+    
+ 
+/*-------------------------------Lista de filmes------------------------------------*/
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  background-color: #D1D1D1;
+  color: #fff;
+  font-family: sans-serif;
+  font-style: 1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+input {
+  border: 0;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.search {
+  font-size: 1.5rem;
+  margin: 1.5em auto 3em;
+  max-width: 50%;
+}
+
+.search [type='search'] {
+  background-color: #fff;
+  color: #000000;
+  padding: 0.5em 2em;
+  text-align: center;
+  width: 100%;
+}
+
+.movies {
+  display: grid;
+  grid-gap: 3em 2em;
+  grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+  list-style: none;
+  margin: 5%;
+  padding: 0;
+}
+
+.movie__figure {
+  position: relative;
+}
+
+.movie__poster {
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5em;
+}
+
+.movie__vote {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f68d01;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.25em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 75%;
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 2.25em;
+}
+
+.movie__title {
+  font-size: 0.875rem;
+  font-weight: 400 !important;
+    margin: 0 ;
+}
+/*-------------------------------Lista de filmes End------------------------------------*/
+
+
+.title-bar {
+  padding: 10px;
+}
+.title-bar .left {
+  float: left;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.title-bar .left .grey {
+  color: #999;
+  font-weight: bold;
+}
+.title-bar .left .bold {
+  font-weight: bold;
+}
+.title-bar .left p {
+  display: inline-block;
+  margin-right: 10px;
+  margin: 0 0 0 10px;
+}
+.title-bar .right {
+  float: right;
+}
+ .title-bar .right a {
+  color: #999;
+  margin-left: 10px;
+      text-decoration: none;
+    transition-duration: 0.3s;
+    font-size: 15px;
+}
+.title-bar .right a.blue {
+  color: #FF3A3A;
+  font-weight: bold;
+      text-decoration: none;
+    transition-duration: 0.3s;
+    font-size: 15px;
+}
+
+.right {
+  float: right;
+  font-size: 15px;
+}
+.right .stars {
+  float: left;
+  color: #F0C236;
+  margin-right: 20px;
+}
+.right .share {
+  float: left;
+  cursor: pointer;
+}
+.right .share .fa {
+  margin-right: 5px;
+}
+
+

@@ -12,6 +12,8 @@ export class AppComponent implements OnInit  {
 
 isLoggedIn = false;
     nome1: string="";  
+    filme: boolean=true;
+    serie: boolean=false;
 
      constructor( private router: Router,
                   private route: ActivatedRoute,
@@ -20,6 +22,10 @@ isLoggedIn = false;
        ngOnInit() {
         this.isLoggedIn = this.authenticationService.isUserLoggedIn();
         console.log('menu ->' + this.isLoggedIn);
+        if(window.location.href.includes("serie")){
+        this.filme = false;
+        this.serie = true;
+        }
       }
 
     handleLogout() {
@@ -40,4 +46,7 @@ isLoggedIn = false;
     this.router.navigate([urlbusca.concat(this.nome1)]);
     //this.GetMovie(this.nome1);
   }
+  
+  
+  
 }

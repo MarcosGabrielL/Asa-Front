@@ -1,0 +1,399 @@
+<head><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script></head>
+
+
+<title>Asa - Filmes Populares</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<style>
+    @media screen and (max-width: 1220px) {
+  .window > .sidebar {
+    transform: translateX(-250px) !important;
+  }
+  .side{
+    transform: translateX(-250px) !important;
+  }
+  .window > .main {
+    margin-left: 0;
+  }
+  .sidebar-is-open .window > .sidebar {
+    transform: translateX(0);
+  }
+  .sidebar-is-open .window > .main {
+    transform: translateX(250px);
+  }
+  .nave {
+   -webkit-transform: translateX(-250px);
+    width: 100%;
+  }
+}
+</style>
+
+<!-- Nav -->
+<mat-sidenav-container class="container" style="    padding-right: 0;
+     padding-left: 0;
+     margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;">
+    <mat-sidenav class="side" mode="side" opened>
+            <aside class="sidebar">
+                    <menu class="menu">
+				<p class="menu-name" style="color: #333;"><b>Categorias</b></p>
+				<ul >
+        <li #myli class="active" (click)="my3li.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    ;
+                                                     myli.classList.add('active')
+                                                     ">
+                                          <a routerLink="" >Todas</a>
+                      </li>
+					<li #my2li  (click)="myli.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    ;
+                                                    my2li.classList.add('active')"> <a routerLink="serie/10759">Ação</a></li>
+          
+          
+				
+					<li #my4li    (click)="my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     myli.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    ;
+                                                    my4li.classList.add('active')"><a routerLink="serie/16">Animaçao</a></li>
+					
+						<!--  --><li #my3li  (click)="my2li.classList.remove('active');
+                                                     myli.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    ;
+                                                    my3li.classList.add('active')"><a routerLink="serie/80">Crime e Policial</a></li>
+					<li #my5li                          (click)="my5li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/35">Comédia</a></li>
+					<li #my6li                           (click)="my6li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/99">Documentário</a></li>
+					<li #my7li                            (click)="my7li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/18">Drama</a></li>
+					<li #my8li                             (click)="my8li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/10751">Familia</a></li>
+					<li #my9li                              (click)="my9li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/10762">Infantil</a></li>
+					<li #my10li                               (click)="my10li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/9648">Misterio</a></li>
+					<li #my11li                                (click)="my11li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/10763">Noticias</a></li>
+					<li #my12li                                 (click)="my12li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/10764">Reality</a></li>
+					<li #my13li                                  (click)="my13li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/10765">Sci-Fi & Fantasia</a></li>
+					<li #my14li                                   (click)="my14li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/10766">Soap</a></li>
+					<li #my15li                                   (click)="my15li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/10767">Talk Show</a></li>
+					<li #my16li                                    (click)="my16li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my17li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/10768">Guerra e Politica</a></li>
+					<li #my17li                                     (click)="my17li.classList.add('active');
+                                                     myli.classList.remove('active');
+                                                     my2li.classList.remove('active');
+                                                     my3li.classList.remove('active');
+                                                     my4li.classList.remove('active');
+                                                     my5li.classList.remove('active');
+                                                     my6li.classList.remove('active');
+                                                     my7li.classList.remove('active');
+                                                     my8li.classList.remove('active');
+                                                     my9li.classList.remove('active');
+                                                     my10li.classList.remove('active');
+                                                     my11li.classList.remove('active');
+                                                     my12li.classList.remove('active');
+                                                     my13li.classList.remove('active');
+                                                     my14li.classList.remove('active');
+                                                     my15li.classList.remove('active');
+                                                     my16li.classList.remove('active');
+                                                    
+                                                    "><a routerLink="serie/37">Faroeste</a></li>
+				
+                                        <li><a ></a></li>
+				</ul>
+
+				<div class="separator"></div>
+				
+			 <app-torrents-modal ></app-torrents-modal>
+			</menu>
+		</aside>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="nave">
+    <div style="    background-color: #333333;">
+        <router-outlet>
+           
+        </router-outlet>
+        </div>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+<div style="display:none;">
+	<iframe id="s" width="560" height="315"
+		src="https://www.youtube.com/embed/XFl51roV_Y8?autoplay=1&mute=1&controls=0"
+		title="YouTube video player" frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+</div>
